@@ -237,9 +237,9 @@
   .aix-title{font-size:15.5px;font-weight:600;margin-top:3px;color:#fff;}
   .aix-sub{font-size:12px;color:#a9b6c6;margin-top:4px;line-height:1.6;max-width:760px;}
   .aix-sub b{color:#e8edf4;font-weight:600;}
-  .aix-detbtn{margin-left:auto;flex:none;background:transparent;border:1px solid #3b5272;color:#dbe4ef;font-size:12px;
-    padding:5px 11px;border-radius:2px;cursor:pointer;white-space:nowrap;font-family:inherit;}
-  .aix-detbtn:hover{background:#1c2f48;border-color:#5a7398;}
+  .aix-detbtn{margin-left:auto;flex:none;background:#d39b32;border:1px solid #d39b32;color:#0f1b2b;font-size:12.5px;font-weight:700;
+    padding:6px 14px;border-radius:2px;cursor:pointer;white-space:nowrap;font-family:inherit;align-self:center;}
+  .aix-detbtn:hover{background:#e3ad45;border-color:#e3ad45;}
   .aix-stats{display:flex;background:#13233a;border-top:1px solid #22344d;}
   .aix-stat{flex:1;padding:8px 16px;border-right:1px solid #22344d;}
   .aix-stat:last-child{border-right:none;}
@@ -256,7 +256,10 @@
   .aix-card:hover{background:#f6f9fc;}
   .aix-card.top{background:#f3f7fc;}
   .aix-card.top::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#1d3a63;}
-  .aix-card.static{cursor:default;}
+  .aix-card.picked{background:#fbf5e6;}
+  .aix-card.picked::after{content:"852에 입력됨";position:absolute;right:14px;bottom:10px;font-size:11px;color:#8a6414;font-weight:600;}
+  #new852-input.flash{animation:inpflash 1.2s ease-out;}
+  @keyframes inpflash{0%{background:#fbe9bf;}100%{background:#fff;}}
   .aix-rank{font-size:12px;color:#8a97a8;font-variant-numeric:tabular-nums;padding-top:3px;font-weight:600;}
   .aix-call{font-family:"IBM Plex Mono",Consolas,monospace;font-size:16px;font-weight:600;color:#0f1b2b;}
   .aix-label{font-size:13px;color:#3a4a5c;margin-left:8px;}
@@ -292,6 +295,8 @@
   .aix-step .t{font-size:13px;font-weight:600;color:#0f1b2b;margin:2px 0 4px;}
   .aix-step .d{font-size:11.5px;color:#4b5a6b;line-height:1.55;}
   .aix-step .d code{font-family:"IBM Plex Mono",Consolas,monospace;font-size:11px;background:#f1f4f8;padding:0 3px;border-radius:2px;}
+  .aix-note{font-size:11.5px;color:#6b7a8c;line-height:1.6;margin-top:8px;}
+  .aix-note b{color:#3c4858;font-weight:600;}
   .aix-method{background:#fff;border:1px solid #dde3ea;padding:10px 12px;font-size:12px;color:#3c4858;line-height:1.65;border-radius:2px;}
   .aix-method .eq{font-family:"IBM Plex Mono",Consolas,monospace;font-size:12px;color:#0f1b2b;background:#f5f7fa;padding:5px 8px;margin:6px 0;border-radius:2px;}
   .aix-log{background:#0f1b2b;color:#c9d4e2;font-family:"IBM Plex Mono",Consolas,monospace;font-size:11.5px;line-height:1.7;padding:10px 12px;border-radius:2px;}
@@ -507,6 +512,7 @@
   #ov-callsearch .k-count{font-size:14px;}
 
   #ov-aidetail .k-head{font-size:17px;}
+  #ov-aidetail .k-head .x{margin-left:auto;}
   #aidetail-body{font-size:15px !important;line-height:1.75 !important;}
   #aidetail-body .adx-sec h4{font-size:16px;}
   #aidetail-body .adx-kw span{font-size:13px;}
@@ -980,7 +986,7 @@
   <div class="h-sec h-key">
     <div class="h-head">③ 청구기호 정하기 <span class="where">상단 <kbd>편목</kbd> 탭</span></div>
     <div class="h-step">대기열 행 더블클릭 → MARC 상세정보</div>
-    <div class="h-step">→ <kbd class="ai">AI-search</kbd> → 후보 순위·근거 확인 <span class="lbl">(<kbd>근거 상세 보기</kbd>로 인용 도서 및 웹사이트 정보까지)</span></div>
+    <div class="h-step">→ <kbd class="ai">AI-search</kbd> → 후보 순위·근거 확인 <span class="lbl">(<kbd>근거 상세 보기</kbd>에서 인용 도서와 책소개까지)</span></div>
     <div class="h-step">→ 후보 클릭하면 852에 입력 → <kbd>소장처설정</kbd> → <kbd>저장</kbd></div>
     <div class="h-compare">
       <div class="new">AI-search는 사서가 손으로 하던 다섯 단계를 한 번에 돌려 후보와 근거를 함께 보여줍니다.</div>
@@ -1789,7 +1795,7 @@ function aixFacts(d){
   });
   const um = msgs.join(' ').match(/DDC\s*(\d+)개 대학/);
   const shelf = (d.candidates||[]).reduce((n,c)=>n + (c.shelf_sample||[]).length, 0);
-  return { votes, kw, univ: um ? +um[1] : 0, shelf };
+  return { votes, kw, univ: um ? +um[1] : 0, shelf, axesOK: aixAxesOK(d) };
 }
 function aixAxes(c){
   const m = String(c.fit_reasoning||'').match(/주제\s*[·ㆍ]\s*관점[^0-9]*([01]\.\d+)[^0-9]+자료\s*성격\s*[·ㆍ]\s*용도[^0-9]*([01]\.\d+)/);
@@ -1850,18 +1856,19 @@ function aixHero(d, f, withBtn){
       <div class="aix-stat"><div class="n">${f.univ}<small>개 대학</small></div><div class="l">대조한 종합목록 분류</div></div>
     </div>`;
   return `<div class="aix-hero"><div class="aix-hero-top"><div>
-      <div class="aix-kicker">AI-SEARCH · LIB COWORK</div>
+      <div class="aix-kicker">LIB COWORK</div>
       <div class="aix-title">${title}</div>
-      <div class="aix-sub">책소개 API 정보와 ${aixSources(d)}로 후보 서가를 모으고, AI가 실제 꽂힌 도서를 직접 읽고 판단합니다.</div>
+      <div class="aix-sub">책소개 API 정보와 ${aixSources(d)}로 후보 서가를 모으고, AI가 실제 꽂힌 도서들을 직접 읽고 판단합니다.</div>
     </div>${btn}</div>${stats}</div>`;
 }
+function aixAxesOK(d){ return (d.candidates||[]).length > 0 && (d.candidates||[]).every(c=>aixAxes(c)); }
 function aixCard(c, i, d, f, opts){
   const call = c.call || c.h;
   const pct = Math.round(c.shelf_fit*100);
   const isTop = i===0;
   const tag = (isTop && !d.escalate) ? '<span class="aix-tag">AI 1순위</span>' : '';
   const gold = (opts.detail && c.gold_match) ? '<span class="aix-tag gold">실제 사서 최종 판단과 일치</span>' : '';
-  const ax = aixAxes(c);
+  const ax = f.axesOK ? aixAxes(c) : null;
   const axes = ax ? `<div class="aix-axes">주제·관점 ${Math.round(ax[0]*100)}<br>자료 성격·용도 ${Math.round(ax[1]*100)}</div>` : '';
   let cited = '';
   if(opts.detail){
@@ -1874,8 +1881,9 @@ function aixCard(c, i, d, f, opts){
     cited = `<div class="aix-cited"><span class="k">근거로 든 서가 도서</span>${c.cited_books.join(' · ')}</div>`;
   }
   const memo = opts.detail ? '' : candMemoLine(call);
-  const click = opts.detail ? '' : `onclick="pickAIH('${call}')"`;
-  return `<div class="aix-card${isTop?' top':''}${opts.detail?' static':''}" ${click}>
+  const click = opts.detail ? `onclick="pickFromDetail('${call}')"` : `onclick="pickAIH('${call}')"`;
+  const picked = (CATALOG_QUEUE[pmkIdx] && CATALOG_QUEUE[pmkIdx]._pendH === call) ? ' picked' : '';
+  return `<div class="aix-card${isTop?' top':''}${picked}" data-call="${call}" ${click}>
     <div class="aix-rank">${String(i+1).padStart(2,'0')}</div>
     <div><span class="aix-call">${call}</span><span class="aix-label">${c.shelf_label||''}</span>${tag}${gold}
       <div class="aix-chips">${aixChips(c,f)}</div></div>
@@ -1905,9 +1913,16 @@ function toggleMoreAI(el){
   const n = more.children.length;
   el.textContent = willShow ? '접기' : `점수가 낮은 후보 ${n}곳 더 보기`;
 }
+function pickFromDetail(h){
+  pickAIH(h);
+  hide('ov-aidetail');
+  const inp = document.getElementById('new852-input');
+  inp.classList.remove('flash'); void inp.offsetWidth; inp.classList.add('flash');
+}
 function pickAIH(h){
   document.getElementById('new852-input').value = h;
   document.getElementById('new852-input').focus();
+  document.querySelectorAll('.aix-card').forEach(el=>el.classList.toggle('picked', el.dataset.call === h));
   const q = CATALOG_QUEUE[pmkIdx];
   if(!q) return;
   q._pendH = h;
@@ -2018,7 +2033,8 @@ function openAIDetail(){
       <div class="aix-step"><div class="h">STEP 1</div><div class="t">업체 082 번호</div><div class="d">${s1}</div></div>
       <div class="aix-step"><div class="h">STEP 2</div><div class="t">종합목록 타대학 분류</div><div class="d">${s2}</div></div>
       <div class="aix-step${d.went_keyword?'':' skip'}"><div class="h">STEP 3</div><div class="t">본교 장서 키워드</div><div class="d">${s3}</div></div>
-    </div></div>`;
+    </div>
+    <div class="aix-note">후보 서가마다 본교 소장 도서 최대 40권을 읽고 <b>주제·관점</b>과 <b>자료 성격·용도</b> 두 축으로 독립 채점합니다. 1순위가 ${p(AIX_T2)}점 이상이고 2순위와 ${p(AIX_GAP)}점 이상 벌어지면 추천하고, 아니면 사서 확인으로 넘깁니다.</div></div>`;
   }
 
   html += `<div class="aix-sec"><h4>후보 서가별 점수 · ${(d.candidates||[]).length}곳</h4><div class="aix-list" style="border-top:1px solid #dde3ea">` +
