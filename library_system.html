@@ -244,7 +244,16 @@
     padding:6px 8px 7px;margin-top:4px;}
   .hint .h-compare{margin:6px 0 0 14px;padding:5px 8px;border-left:2px solid #ffd166;background:rgba(0,0,0,.2);}
   .hint .h-compare .old{color:#aab4c2;}
-  .hint .h-compare .new{color:#ffd166;margin-top:2px;}
+  .hint .h-compare .new{color:#ffd166;}
+  .hint details{margin-top:4px;}
+  .hint summary{cursor:pointer;color:#aab4c2;font-size:10.5px;list-style:none;user-select:none;}
+  .hint summary::-webkit-details-marker{display:none;}
+  .hint summary::before{content:'▸ ';}
+  .hint details[open] summary::before{content:'▾ ';}
+  .hint summary:hover{color:#fff;}
+  .hint .old-title{color:#cfd6df;margin-top:4px;}
+  .hint ol.old{margin:2px 0 0;padding-left:18px;color:#aab4c2;}
+  .hint .old-ex{color:#aab4c2;margin-top:3px;font-size:10.5px;}
 
   /* ---------- 편목 (cataloging) ---------- */
   .marc .new852{background:var(--label-green);border-top:1px solid var(--label-green-bd);
@@ -852,8 +861,19 @@
     <div class="h-step">→ <kbd class="ai">AI-search</kbd> → 후보 순위·근거 확인 <span class="lbl">(<kbd>상세정보</kbd>로 인용 도서 및 웹사이트 정보까지)</span></div>
     <div class="h-step">→ 후보 클릭하면 852에 입력 → <kbd>소장처설정</kbd> → <kbd>저장</kbd></div>
     <div class="h-compare">
-      <div class="old">기존에는 사서가 손으로 반복: 업체 082 번호를 본교 서가에서 확인 → 종합목록에서 타대학 분포 확인 → 본교 서가와 다시 대조 → 외부 웹사이트 책소개 확인</div>
-      <div class="new">AI-search는 이 과정을 한 번에 돌려 후보와 근거를 함께 보여줍니다.</div>
+      <div class="new">AI-search는 사서가 손으로 하던 다섯 단계를 한 번에 돌려 후보와 근거를 함께 보여줍니다.</div>
+      <details>
+        <summary>기존 방식 보기</summary>
+        <div class="old-title">책 한 권마다 사서가 손으로</div>
+        <ol class="old">
+          <li>원제로 본교 서지를 검색해 이미 있는 책인지 확인</li>
+          <li>업체 082 번호대 서가를 열어 꽂힌 책 제목을 하나하나 읽기</li>
+          <li>안 맞으면 종합목록에서 타대학이 매긴 번호를 대학별로 세기</li>
+          <li>나온 번호마다 본교 서지를 다시 검색해 서가 대조</li>
+          <li>외부 사이트에서 책소개 찾아 읽기</li>
+        </ol>
+        <div class="old-ex">예) 『가장 인간적인 도시』 082 서가 10권 확인 → 안 맞음 → 타대학 번호 5갈래 → 720.2 서가 383권 재확인</div>
+      </details>
     </div>
   </div>
 </div>
