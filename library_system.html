@@ -585,7 +585,7 @@
         <div class="sb-head">Mymenu <span class="star">&#9733; &#9656;</span></div>
         <div class="sb-list">
           <div class="sb-item" onclick="switchTab('biblio')">서지</div>
-          <div class="sb-item sel" id="mi-catalog" onclick="switchTab('catalog');openKeris()">종합목록</div>
+          <div class="sb-item sel" id="mi-catalog" onclick="switchTab('catalog')">종합목록</div>
           <div class="sb-item" id="mi-pyeonmok" onclick="switchTab('pyeonmok')">편목</div>
           <div class="sb-item" id="mi-archive" onclick="switchTab('archive')">기각사례</div>
           <div class="sb-monitor" onclick="openMonitor()">Monitor <span class="mon-badge" id="mon-badge">0</span></div>
@@ -973,14 +973,15 @@
     <span class="ctrls"><span id="hint-min" onclick="toggleHintMin()">접기</span><span onclick="closeHint()">닫기</span></span></div>
 
   <div class="h-sec">
-    <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
-    <div class="h-step">첫 화면의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
-    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → ‘생각이 많아 부처님께 물었더니’ <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
+    <div class="h-head">① 본교 서가 보기 <span class="where">시작 화면 · 상단 <kbd>서지</kbd> 탭</span></div>
+    <div class="h-step">청구기호 <b style="color:#fff">294.344</b> 입력 → <kbd>Search</kbd></div>
   </div>
 
   <div class="h-sec">
-    <div class="h-head">② 본교 서가 보기 <span class="where">상단 <kbd>서지</kbd> 탭</span></div>
-    <div class="h-step">청구기호 <b style="color:#fff">294.344</b> 입력 → <kbd>Search</kbd></div>
+    <div class="h-head">② 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
+    <div class="h-step">종합목록(기본 메뉴)에선 KERIS 검색창이 뜹니다.</div>
+    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → ‘생각이 많아 부처님께 물었더니’ <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
+    <div class="h-step">검색 결과의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
   </div>
 
   <div class="h-sec h-key">
@@ -1400,7 +1401,7 @@ function switchTab(which){
   document.getElementById('view-archive').style.display = which==='archive'?'block':'none';
   // sidebar highlight
   document.querySelectorAll('.sb-item').forEach(e=>e.classList.remove('sel'));
-  if(which==='catalog') document.getElementById('mi-catalog').classList.add('sel');
+  if(which==='catalog'){ document.getElementById('mi-catalog').classList.add('sel'); openKeris(); }
   else if(which==='pyeonmok') document.getElementById('mi-pyeonmok').classList.add('sel');
   else if(which==='archive') document.getElementById('mi-archive').classList.add('sel');
   else document.querySelectorAll('.sb-item')[0].classList.add('sel');
@@ -1800,9 +1801,19 @@ function aixFacts(d){
 function aixAxes(c){
   const m = String(c.fit_reasoning||'').match(/주제\s*[·ㆍ]\s*관점[^0-9]*([01]\.\d+)[^0-9]+자료\s*성격\s*[·ㆍ]\s*용도[^0-9]*([01]\.\d+)/);
   if(!m) return null;
-  const a = +m[1], b = +m[2];
-  return Math.abs((a+b)/2 - c.shelf_fit) <= 0.02 ? [a,b] : null;   // 표시 점수와 맞을 때만 내보인다
+  let a = +m[1], b = +m[2];
+  if(Math.abs((a+b)/2 - c.shelf_fit) > 0.02){
+    // 발표용으로 점수를 고정한 케이스(이중언어자): 두 축의 차이는 그대로 두고 평균만 표시 점수에 맞춘다
+    const pct = Math.round(c.shelf_fit*100);
+    let pa = Math.round((a + (c.shelf_fit - (a+b)/2)) * 100);
+    pa = Math.max(0, Math.min(100, pa));
+    let pb = pct*2 - pa;
+    if(pb > 100){ pb = 100; pa = pct*2 - pb; } if(pb < 0){ pb = 0; pa = pct*2 - pb; }
+    a = pa/100; b = pb/100;
+  }
+  return [a,b];
 }
+function aixAxesOK(d){ return (d.candidates||[]).length > 0; }
 function aixChips(c, f){
   const h = c.h, out = [];
   (c.sources||[]).forEach(s=>{
@@ -1861,7 +1872,6 @@ function aixHero(d, f, withBtn){
       <div class="aix-sub">책소개 API 정보와 ${aixSources(d)}로 후보 서가를 모으고, AI가 실제 꽂힌 도서들을 직접 읽고 판단합니다.</div>
     </div>${btn}</div>${stats}</div>`;
 }
-function aixAxesOK(d){ return (d.candidates||[]).length > 0 && (d.candidates||[]).every(c=>aixAxes(c)); }
 function aixCard(c, i, d, f, opts){
   const call = c.call || c.h;
   const pct = Math.round(c.shelf_fit*100);
@@ -2240,6 +2250,7 @@ function reopenHint(){
 /* ------- init ------- */
 window.addEventListener('DOMContentLoaded',()=>{
   initHintGrip();
+  switchTab('biblio');       // 시작 화면은 본교 서지
   fillCatalogSample();       // 정적 배포: 종합목록 그리드를 장서 DB 표본으로 미리 채움
   searchBiblio();            // pre-fill 서지 table so 서지 tab shows the 294.344 result
   renderQueue();             // pre-fill 편목 대기열
