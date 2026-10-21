@@ -156,6 +156,9 @@
   table.grid tbody tr:hover td{background:#dcecf9;}
   .num{text-align:center;color:#666;}
   table.grid td.cut > div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  table.grid td.cut{cursor:pointer;}
+  table.grid tr.open td.cut > div{white-space:normal;overflow:visible;word-break:keep-all;}
+  table.grid tr.open td{vertical-align:top;}
   .empty-rows tr td{height:20px;border:1px solid #eef2f6;background:#fff !important;}
 
   /* comprehensive catalog layout */
@@ -2231,6 +2234,12 @@ function flashQueueRow(i){
 function confirmSaveDone(){
   hide('ov-savedone');
 }
+
+/* ------- 서지 표: 잘린 서명·저자·출판사 칸을 클릭하면 그 행을 펼쳐 전체를 보여준다 ------- */
+document.getElementById('bi-body').addEventListener('click', e=>{
+  const td = e.target.closest('td.cut');
+  if(td) td.parentElement.classList.toggle('open');
+});
 
 /* ------- 사용법 패널 ------- */
 // 오른쪽 위 손잡이를 끌어 크기 조절. 패널은 왼쪽 아래 기준이라 위·오른쪽으로 늘어난다.
