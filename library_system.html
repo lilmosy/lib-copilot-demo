@@ -1722,23 +1722,35 @@ let lastAIData = null; // 상세정보(ov-aidetail)가 마지막 /api/classify �
 async function runAIModel(){
   const q = CATALOG_QUEUE[pmkIdx];
   const box = document.getElementById('ai852-box');
+  // 이미 불러온 책: 결과가 떠 있으면 그대로 두고, 닫혀 있으면 로딩 없이 바로 다시 보여준다
+  if(q && q._aiData){
+    if(!box.querySelector('.aix')){ lastAIData = q._aiData; renderAIResult(q._aiData); }
+    box.scrollIntoView({block:'nearest', behavior:'smooth'});
+    return;
+  }
+  if(q && q._aiLoading) return;   // 불러오는 중에 다시 눌러도 무시
   lastAIData = null;
   if(!q.case){
     box.innerHTML = '<div class="ai852-err">이 항목은 코파일럿 데모 케이스가 아닙니다.</div>';
     return;
   }
   const btn = document.querySelector('#ov-marcedit .btn.ai'); if(btn) btn.disabled = true;
+  q._aiLoading = true;
   try{
     const [data] = await Promise.all([
       staticClassify(q.case),   // 정적 배포: 공모전 파이프라인 결과를 미리 저장한 JSON
       playAISteps(box)          // 실제 파이프라인 단계를 순서대로 보여주는 로딩 (약 5초)
     ]);
     if(btn) btn.disabled = false;
+    q._aiLoading = false;
     if(data.error){ box.innerHTML = `<div class="ai852-err">오류: ${data.error}</div>`; return; }
+    q._aiData = data;
+    if(CATALOG_QUEUE[pmkIdx] !== q) return;   // 그 사이 다른 책을 열었으면 그 화면에 그리지 않는다
     lastAIData = data;
     renderAIResult(data);
   }catch(e){
     if(btn) btn.disabled = false;
+    q._aiLoading = false;
     box.innerHTML = `<div class="ai852-err">요청 실패: ${e}</div>`;
   }
 }
