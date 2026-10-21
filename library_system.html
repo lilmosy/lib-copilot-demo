@@ -2081,7 +2081,7 @@ function openAIDetail(){
       <div class="aix-step"><div class="h">STEP 2</div><div class="t">종합목록 타대학 분류</div><div class="d">${s2}</div></div>
       <div class="aix-step${d.went_keyword?'':' skip'}"><div class="h">STEP 3</div><div class="t">본교 장서 키워드</div><div class="d">${s3}</div></div>
     </div>
-    <div class="aix-note">후보 서가마다 본교 소장 도서 최대 40권을 읽고 <b>주제·관점</b>과 <b>자료 성격·용도</b> 두 축으로 독립 채점합니다. 1순위가 ${p(AIX_T2)}점 이상이고 2순위와 ${p(AIX_GAP)}점 이상 벌어지면 추천하고, 아니면 사서 확인으로 넘깁니다.</div></div>`;
+    <div class="aix-note">후보 서가마다 본교 소장 도서 최대 40권을 읽고 <b>주제·관점</b>과 <b>자료 성격·용도</b> 두 축으로 독립 채점합니다.<br>1순위가 ${p(AIX_T2)}점 이상이고 2순위와 ${p(AIX_GAP)}점 이상 벌어지면 추천하고, 아니면 사서 확인으로 넘깁니다.</div></div>`;
   }
 
   html += `<div class="aix-sec"><h4>후보 서가별 점수 · ${(d.candidates||[]).length}곳</h4><div class="aix-list" style="border-top:1px solid #dde3ea">` +
