@@ -974,8 +974,9 @@
 
   <div class="h-sec">
     <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
-    <div class="h-step"><kbd>서지검색</kbd> → 서명에 <span class="lbl">ex.</span> ‘생각이 많아 부처님께 물었더니’ → <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
-    <div class="h-step">목록의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
+    <div class="h-step">종합목록(기본 메뉴)에선 KERIS 검색창이 뜹니다.</div>
+    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → 서명에 <span class="lbl">ex.</span> ‘생각이 많아 부처님께 물었더니’ → <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
+    <div class="h-step">검색 결과의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
   </div>
 
   <div class="h-sec">
@@ -1628,6 +1629,21 @@ function makeDraggable(box, handle){
 }
 makeDraggable(document.querySelector('#ov-marcedit .keris'), document.querySelector('#ov-marcedit .k-head'));
 makeDraggable(document.querySelector('#ov-aidetail .keris'), document.querySelector('#ov-aidetail .k-head'));
+(function(){
+  const box = document.querySelector('#ov-keris .keris'), handle = box.querySelector('.k-head');
+  let sx=0, sy=0, dx=0, dy=0, bx=0, by=0, dragging=false;
+  handle.style.cursor = 'move'; handle.style.userSelect = 'none';
+  handle.addEventListener('mousedown', e=>{
+    if(e.target.closest('.x')) return;
+    dragging = true; sx = e.clientX; sy = e.clientY; bx = dx; by = dy; e.preventDefault();
+  });
+  window.addEventListener('mousemove', e=>{
+    if(!dragging) return;
+    dx = bx + e.clientX - sx; dy = by + e.clientY - sy;
+    box.style.transform = `translate(${dx}px, ${dy}px)`;
+  });
+  window.addEventListener('mouseup', ()=>{ dragging = false; });
+})();
 
 function openMarcEdit(i){
   pmkIdx = i;
