@@ -973,15 +973,14 @@
     <span class="ctrls"><span id="hint-min" onclick="toggleHintMin()">접기</span><span onclick="closeHint()">닫기</span></span></div>
 
   <div class="h-sec">
-    <div class="h-head">① 본교 서가 보기 <span class="where">시작 화면 · 상단 <kbd>서지</kbd> 탭</span></div>
-    <div class="h-step">청구기호 <b style="color:#fff">294.344</b> 입력 → <kbd>Search</kbd></div>
+    <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">시작 화면 · 좌측 <kbd>종합목록</kbd></span></div>
+    <div class="h-step">목록의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다. 종합목록 메뉴를 누르면 KERIS 검색창이 뜹니다.</div>
+    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → <span class="lbl">ex.</span> ‘생각이 많아 부처님께 물었더니’ <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd> → 목록 맨 위에 추가</div>
   </div>
 
   <div class="h-sec">
-    <div class="h-head">② 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
-    <div class="h-step">종합목록(기본 메뉴)에선 KERIS 검색창이 뜹니다.</div>
-    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → ‘생각이 많아 부처님께 물었더니’ <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
-    <div class="h-step">검색 결과의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
+    <div class="h-head">② 본교 서가 보기 <span class="where">상단 <kbd>서지</kbd> 탭</span></div>
+    <div class="h-step">청구기호 <b style="color:#fff">294.344</b> 입력 → <kbd>Search</kbd></div>
   </div>
 
   <div class="h-sec h-key">
@@ -1098,7 +1097,7 @@ async function fillCatalogSample(){
       const main = r.title.split(' :')[0].split(' = ')[0];
       BOOKS.push({ query: main, matchKeys: [normalize(main), normalize(r.title)], results: [r] });
     });
-    const all = BOOKS.slice(0, BOOKS.length - recs.length).flatMap(bk => bk.results).concat(recs);
+    const all = BOOKS.slice(1, BOOKS.length - recs.length).flatMap(bk => bk.results).concat(recs);
     currentResults = all; currentResults._query = '신착도서';
     populateCatalog(all[0], '신착도서', all.length);
     document.getElementById('cat-query').innerHTML = "검색종류 : [키워드] &nbsp; 검색항목 : [등록일] &nbsp; 검색어 : [최근 반입분]";
@@ -1471,7 +1470,10 @@ function selectKerisRow(i){
 function importSelected(){
   if(!currentResults.length){ show('ov-noresult'); return; }
   const rec = currentResults[selectedIdx] || currentResults[0];
-  populateCatalog(rec, currentResults._query, currentResults.length);
+  const merged = [rec].concat(catalogRows.filter(x => x.ctrl !== rec.ctrl));
+  merged._query = currentResults._query;
+  currentResults = merged;
+  populateCatalog(rec, merged._query, merged.length);
   closeKeris();
 }
 
@@ -2250,7 +2252,6 @@ function reopenHint(){
 /* ------- init ------- */
 window.addEventListener('DOMContentLoaded',()=>{
   initHintGrip();
-  switchTab('biblio');       // 시작 화면은 본교 서지
   fillCatalogSample();       // 정적 배포: 종합목록 그리드를 장서 DB 표본으로 미리 채움
   searchBiblio();            // pre-fill 서지 table so 서지 tab shows the 294.344 result
   renderQueue();             // pre-fill 편목 대기열
