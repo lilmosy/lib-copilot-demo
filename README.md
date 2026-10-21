@@ -1,11 +1,11 @@
-# LIB COWORK — 사서·AI 협업 청구기호 부여 데모
+# LibCopilot — 사서·AI 협업 청구기호 부여 데모
 
 대학도서관에 새 책이 들어오면 사서가 청구기호(852 ▼h)를 매긴다. 이 데모는 실제 편목(cataloging) 업무 화면을 그대로 재현하고, 그 안에서 AI가 청구기호 후보와 근거를 제시하는 흐름을 보여준다.
 
 2026 서강대학교 생성형 AI 아이디어 공모전 우수상 (sogang renAIssance 팀).
 원본 저장소: https://github.com/HAICoLab/sogang_renAIssance
 
-**데모 보기:** https://lilmosy.github.io/lib-copilot-demo/library_system.html
+**데모 보기:** https://lilmosy.github.io/LibCopilot/library_system.html
 
 ## 무엇을 하는가
 
