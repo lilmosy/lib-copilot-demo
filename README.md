@@ -15,7 +15,7 @@ AI가 후보와 근거를 제시하는 흐름을 보여줍니다.
 |---|---|
 | `/api/biblio` → SQLite 서버 조회 | `data/books.db.gz`(장서 DB 부분집합 14만 건)를 브라우저 안 SQLite([sql.js](https://sql.js.org))로 열어 **같은 SQL** 실행 |
 | `/api/classify` → lib_copilot 파이프라인 실시간 LLM 호출 | 파이프라인을 한 번 실행해 얼려둔 `data/classify/<case>.json` (수정 없음) |
-| 종합목록 그리드 비어 있음 | `data/catalog_sample.json` — 장서 DB에서 뽑은 실제 레코드 40권으로 채움 |
+| 종합목록 그리드 비어 있음 | `data/catalog_sample.json` — 골든셋 중 편목 대기열이 아닌 7권을 KERIS 실제 대학별 소장 기록과 함께 채움 (하드코딩 검색 3권은 원본 그대로) |
 
 방문자가 어떤 버튼을 눌러도 외부 API는 호출되지 않습니다.
 
@@ -40,7 +40,7 @@ python3 -m http.server 8000
 ```
 library_system.html        화면 (원본 + 정적 데이터 계층 한 블록)
 data/books.db.gz           장서 DB 부분집합 — 데모 후보 번호대 전체 + 랜덤 표본, 서지 기본 필드만
-data/catalog_sample.json   종합목록 표본 40권
+data/catalog_sample.json   종합목록 7권 + 대학별 소장 기록
 data/classify/*.json       편목 대기열 5건의 AI 추천 결과 (lib_copilot 파이프라인 출력 원본)
 vendor/sql-wasm.*          sql.js 1.12.0
 ```

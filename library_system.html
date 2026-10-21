@@ -822,7 +822,7 @@
   <br>책이 나오는 3가지: <b>‘생각이 많아 부처님께 물었더니’</b> · <b>‘그만두지 않는 독서’</b>(2건) · <b>‘리셋 유어 마인드’</b> → [검색] 후 [선택자료 가져오기].
   <br>상단 <b>서지</b> 탭 → 청구기호 <b>294.344</b> [Search] → 결과 목록.
   <br>상단 <b>편목</b> 탭 → 대기열 행 더블클릭 → MARC 상세정보 → <b>소장처설정</b> → 852 청구기호 입력 → [저장].
-  <br><span style="color:#888">정적 배포판 · 종합목록 첫 화면 40권은 장서 DB 표본 · 서지 검색은 장서 일부(14만 건) · AI 추천은 공모전 파이프라인 실행 결과를 저장해 보여줌</span>
+  <br><span style="color:#888">정적 배포판 · 종합목록 첫 화면 7권은 KERIS 실제 대학별 소장 기록 · 서지 검색은 장서 일부(14만 건) · AI 추천은 공모전 파이프라인 실행 결과를 저장해 보여줌</span>
 </div>
 
 
@@ -834,7 +834,7 @@
    여기서는 서버 없이 같은 결과를 내도록 데이터 공급만 바꾼다. 화면 로직은 원본 그대로.
      · /api/biblio   → data/books.db.gz 를 브라우저 안 SQLite(sql.js)로 열어 서버와 같은 SQL을 돌린다
      · /api/classify → 공모전 파이프라인(run_classify_LIVE)을 한 번 돌려 얼려둔 data/classify/<case>.json
-     · 종합목록 그리드 → data/catalog_sample.json (장서 DB에서 뽑은 실제 레코드 40권)
+     · 종합목록 그리드 → data/catalog_sample.json (골든셋 중 편목 대기열이 아닌 7권 + KERIS 실제 대학별 소장 기록)
    ============================================================ */
 const STATIC_LIMIT = 300;  // 서버 LIMIT와 동일
 let _staticDbPromise = null;
@@ -902,15 +902,13 @@ async function fillCatalogSample(){
     const res = await fetch('data/catalog_sample.json');
     const books = await res.json();
     const recs = books.map(b=>{
-      const ctrl = (b.marc['001']||[b.id])[0].replace(/^0+/, '');
+      const ctrl = b.id;   // KERIS 종합목록 제어번호
       const d5 = (b.marc['005']||[''])[0];
       const d8 = (b.marc['008']||[''])[0];
       const created = d8.length>=6 ? _fmtDate('20'+d8.slice(0,6)) : _fmtDate(d5);
-      const f852 = (b.marc['852']||[''])[0];
-      const locA = ((f852.split('▼').find(x=>x.trim().startsWith('a'))||'').trim().slice(1).trim()) || '중앙';
       return { ctrl, title:b.title, author:b.author||'', pub:b.publisher||'', year:b.year||'', isbn:b.isbn||'',
                type:'단행본', inst:'1', d1:created, d2:_fmtDate(d5), d3:_fmtDate(d5),
-               holdings:[[`서강대학교 로욜라도서관 (${locA})`, 'DDC', b.h, b.i||'']], marc:_detailToMarc(b.marc) };
+               holdings:b.holdings, marc:_detailToMarc(b.marc) };
     });
     if(!recs.length) return;
     currentResults = recs; currentResults._query = '신착도서';
