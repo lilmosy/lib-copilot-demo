@@ -1523,7 +1523,7 @@ function populateCatalog(r, query, count){
   ).join('');
   // holdings
   document.getElementById('hold-body').innerHTML = r.holdings.map((h,i)=>
-    `<tr${i===r.holdings.length-1?' class="sel"':''}><td class="num">${i+1}</td>
+    `<tr onclick="selectHoldRow(this)"><td class="num">${i+1}</td>
      <td>${h[0]}</td><td class="num">${h[1]}</td><td class="num">${h[2]}</td><td class="num">${h[3]}</td></tr>`
   ).join('');
   // MARC editor
@@ -1532,6 +1532,11 @@ function populateCatalog(r, query, count){
   document.getElementById('m-d2').textContent = r.d2;
   document.getElementById('m-d3').textContent = r.d3;
   document.getElementById('marc-body').innerHTML = marcFieldsHTML(r.marc);
+}
+
+// 소장대학 표: 클릭한 대학 행을 선택 표시
+function selectHoldRow(tr){
+  tr.parentElement.querySelectorAll('tr').forEach(t=>t.classList.toggle('sel', t===tr));
 }
 
 // clicking a different row in the 종합목록 grid loads its detail/MARC
