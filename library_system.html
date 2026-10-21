@@ -282,7 +282,8 @@
   .aix-card.top{background:#f3f7fc;}
   .aix-card.top::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#1d3a63;}
   .aix-card.picked{background:#fbf5e6;}
-  .aix-card.picked::after{content:"852에 입력됨";position:absolute;right:160px;top:15px;font-size:11px;color:#8a6414;font-weight:600;}
+  .aix-tag.pick{display:none;background:#d39b32;color:#0f1b2b;}
+  .aix-card.picked .aix-tag.pick{display:inline-block;}
   #new852-input.flash{animation:inpflash 1.2s ease-out;}
   @keyframes inpflash{0%{background:#fbe9bf;}100%{background:#fff;}}
   .aix-rank{font-size:12px;color:#8a97a8;font-variant-numeric:tabular-nums;padding-top:3px;font-weight:600;}
@@ -1950,7 +1951,7 @@ function aixCard(c, i, d, f, opts){
   const picked = (CATALOG_QUEUE[pmkIdx] && CATALOG_QUEUE[pmkIdx]._pendH === call) ? ' picked' : '';
   return `<div class="aix-card${isTop?' top':''}${picked}" data-call="${call}" ${click}>
     <div class="aix-rank">${String(i+1).padStart(2,'0')}</div>
-    <div><span class="aix-call">${call}</span><span class="aix-label">${c.shelf_label||''}</span>${tag}${gold}
+    <div><span class="aix-call">${call}</span><span class="aix-label">${c.shelf_label||''}</span>${tag}${gold}<span class="aix-tag pick">852 입력됨</span>
       <div class="aix-chips">${aixChips(c,f)}</div></div>
     <div class="aix-score"><span class="v">${pct}</span><span class="u">/100</span>
       <div class="aix-bar${pct<60?' low':''}"><i style="width:${pct}%"></i></div>${axes}</div>
