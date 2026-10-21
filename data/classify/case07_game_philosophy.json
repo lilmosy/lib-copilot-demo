@@ -1,0 +1,1085 @@
+{
+ "inherited": false,
+ "escalate": true,
+ "escalate_reason": "1순위 794.801(0.95)가 문턱은 넘지만, 2순위 793.01(0.90)와의 격차 0.05가 기준(0.15)에 못 미칩니다 — 상위 후보가 경합합니다. 사서가 갈라주세요.",
+ "top": "794.801",
+ "candidates": [
+  {
+   "h": "794.801",
+   "call": "794.801",
+   "shelf_fit": 0.95,
+   "shelf_label": "비디오게임 철학·윤리와 매체이론",
+   "fit_reasoning": "주제·관점 0.96, 자료 성격·용도 0.94. 서가 표본은 비디오게임의 존재론·예술성·가상세계·윤리와 폭력 문제를 철학 및 게임학 관점에서 분석하는 학술 단행본이 반복된다. 신규 도서는 게임의 정의, 재미, 자유, 예술성, 장르와 콘텐츠의 깊이를 철학적으로 묻는 책으로 이 중심 초점과 매우 잘 맞는다. 다만 표본은 영어권 학술 연구서 비중이 높고 신규 도서의 서술 난이도·학술적 깊이는 제공 정보만으로 확정하기 어렵다.",
+   "cited_books": [
+    "Gaming the system : deconstructing video games, games studies, and virtual worlds",
+    "Philosophy through video games",
+    "The philosophy of computer games",
+    "Video games, violence, and the ethics of fantasy : killing time"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "Gaming the system : deconstructing video games, games studies, and virtual worlds",
+     "desc": "비디오 게임을 도구적 관점이 아닌 비판적 문화 텍스트로 재해석하는 게임학 연구서(Kunzelman). 게임의 서사·플레이·산업을 해체적으로 분석해 게임연구의 새로운 틀을 제안한다."
+    },
+    {
+     "title": "Philosophy through video games",
+     "desc": "비디오 게임을 매개로 자유의지, 인격동일성, 미학, 윤리 등 철학의 핵심 주제를 탐구하는 입문서(Cogburn·Silcox). 구체적 게임 사례를 통해 추상적 철학 개념을 쉽게 풀어낸다."
+    },
+    {
+     "title": "The philosophy of computer games",
+     "desc": "컴퓨터 게임의 존재론·미학·윤리를 다학제적으로 다루는 논문집(Sageng·Fossheim·Larsen 편). 게임을 독자적 철학적 탐구 대상으로 정립하려는 초기 게임철학 연구를 모았다."
+    },
+    {
+     "title": "Video games, violence, and the ethics of fantasy : killing time",
+     "desc": "비디오 게임 속 폭력 재현의 윤리를 다루는 철학서(Bartel). 시뮬레이션된 폭력이 다른 매체의 폭력 묘사와 어떻게 다른지 분석하며 이른바 '게이머의 딜레마'를 검토한다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "Fictional Practices of Spirituality I : Interactive Media",
+     "author": "Marcato, Leonardo",
+     "call": "794.801 F448"
+    },
+    {
+     "title": "Video games, violence, and the ethics of fantasy : killing time",
+     "author": "Bartel, Christopher",
+     "call": "794.801 B283v"
+    },
+    {
+     "title": "Gaming the system : deconstructing video games, games studies, and virtual worlds",
+     "author": "Gunkel, David J",
+     "call": "794.801 G975g"
+    },
+    {
+     "title": "Philosophy through video games",
+     "author": "Cogburn, Jon",
+     "call": "794.801 C676p"
+    },
+    {
+     "title": "The philosophy of computer games",
+     "author": "Sageng, John Richard",
+     "call": "794.801 P568"
+    }
+   ],
+   "sources": [
+    "종합서지",
+    "키워드검색"
+   ],
+   "gold_match": true
+  },
+  {
+   "h": "793.01",
+   "call": "793.01",
+   "shelf_fit": 0.9,
+   "shelf_label": "게임·놀이의 철학적 미학 이론",
+   "fit_reasoning": "서가 표본은 게임과 놀이를 행위성·자율성·심리·규칙·미학의 관점에서 분석하는 철학적·이론적 연구서로 반복된다. 신규 도서는 게임의 정의와 성립 요건, 재미·예술성·장르, 자유와 콘텐츠의 깊이를 철학적으로 묻는 책이어서 이 중심 주제와 잘 맞는다. 다만 표본은 행위성 및 놀이 미학을 깊이 있게 다루는 전문 이론서 성격이 강한 반면, 신규 도서는 여러 질문을 폭넓게 다루는 입문적 구성일 가능성이 있어 자료 성격에는 약간의 차이가 남는다. 주제·관점 0.93, 자료 성격·용도 0.87.",
+   "cited_books": [
+    "게임 : 행위성의 예술"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "게임 : 행위성의 예술",
+     "desc": "2021년 미국철학협회 도서상을 수상한 C. 티 응우옌의 &lt;게임 : 행위성의 예술&gt;이 출간되었다. 게임이라는 고유한 예술 형식에 깃든 가치를 밝히는 이 책은 우리의 행위성은 물론 사회성, 자율성, 아름다움에 대한 고정관념을 부수는 신선한 통…"
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "게임 : 행위성의 예술",
+     "author": "Nguyen, C. Thi",
+     "call": "793.01 N576g K"
+    },
+    {
+     "title": "Games : agency as art",
+     "author": "Nguyen, C. Thi",
+     "call": "793.01 N576g"
+    },
+    {
+     "title": "The aesthetic of play",
+     "author": "Upton, Brian",
+     "call": "793.01 U71a"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "794.8",
+   "call": "794.8",
+   "shelf_fit": 0.87,
+   "shelf_label": "비디오게임 제작·문화·비평 연구서",
+   "fit_reasoning": "주제·관점 0.91, 자료 성격·용도 0.83. 서가 표본은 게임 디자인·개발 실무와 e스포츠를 비롯해 게임의 심리·사회·정치·미학을 분석하는 비평·연구서를 함께 포괄한다. 신규 도서는 게임의 정의, 재미, 자유, 예술성, 장르를 철학적으로 묻는 비평적 접근으로, 게임 철학·문화이론 자료와 밀접하게 맞는다. 다만 표본에는 제작·코딩·운영을 위한 실무 입문서와 특정 게임 안내서도 상당수 있어, 순수 철학적 논의인 이 책은 그 실습적 이용 목적과는 거리가 있다.",
+   "cited_books": [
+    "단위조작 : 비디오게임 비평의 최전선",
+    "게임 코러스",
+    "사이버 루덴스 : 게임의 미학과 문화",
+    "우리는 왜 게임을 하는가? : 유희와 습관 그리고 또 하나의 세계가 되기까지"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "단위조작 : 비디오게임 비평의 최전선",
+     "desc": "단위조작은 서로 맞물려 있는 표현적 의미 단위체들의 배열을 상정하는 개념이다. 결정론적인 체계보다 이산적이고 단절된 행위를, 맥락보다 기능을, 지속되는 것보다 사례들을 우선시하는 의미 형성 양태다. 이 책 ≪단위조작≫은 비디오게임의 단위조작에 기초해 …"
+    },
+    {
+     "title": "게임 코러스",
+     "desc": "연극, 서브컬처, 퀴어 문화 등의 어둡고 음습한 구석을 활발히 연구해 온 작가 영이의 첫 게임 이론서이다. 『게임 코러스』는, 제목 그대로, 게임이라는 매체 혹은 장르가 작동하는 고유의 방식을 고대 그리스 연극의 시민 합창단, 즉 코러스와의 연관성 속…"
+    },
+    {
+     "title": "사이버 루덴스 : 게임의 미학과 문화",
+     "desc": "2023년 국립현대미술관에서 진행된 포럼 '사이버 루덴스:  미래 게이밍, 테크놀로지, 미학의 토포스'로부터 기획되었다. 이 포럼에서 단행본으로 이어지는 1여 년간의 여정에 게임을 탐구하는 각 분야의 전문가, 예술가, 연구자들이 참여했다."
+    },
+    {
+     "title": "우리는 왜 게임을 하는가? : 유희와 습관 그리고 또 하나의 세계가 되기까지",
+     "desc": "게임 관련주는 갖고 있지만 게임은 모르는 사람. 게임에 수백 만 원을 썼지만 스스로도 왜 게임에 돈을 쓰고 있는지 이유를 모르는 사람. 이제는 배워야만 하는 현 시대 가장 뜨거운 뉴미디어인 게임을 인문학과 심리학 관점으로 다시 풀어낸다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "A gamer's introduction to programming in C# : welcome brave adventurer!",
+     "author": "Langille, Aaron",
+     "call": "794.8 L281g"
+    },
+    {
+     "title": "단위조작 : 비디오게임 비평의 최전선",
+     "author": "Bogost, Ian",
+     "call": "794.8 B675u K"
+    },
+    {
+     "title": "엘더스크롤 공식 탐리엘 생존 안내서",
+     "author": "Schafer, Tori",
+     "call": "794.8 S296e K"
+    },
+    {
+     "title": "로블록스 루아 프로그래밍 첫 발자국 떼기 : 로블록스 공식 가이드",
+     "author": "Johnson, Genevieve",
+     "call": "794.8 J67c K"
+    },
+    {
+     "title": "(로블록스 스튜디오를 활용한) 나만의 로블록스 게임 만들기",
+     "author": "Jagneaux, David",
+     "call": "794.8 J24u 2022/K"
+    },
+    {
+     "title": "e스포츠 가이드북",
+     "author": "Collis, William",
+     "call": "794.8 C713b K"
+    },
+    {
+     "title": "게임 유저 리서치 : 더 좋은 게임을 만들기 위한 사용자 조사 방법",
+     "author": "Bromley, Steve",
+     "call": "794.8 B868h K"
+    },
+    {
+     "title": "로블록스 게임 스크립트로 코딩 입문하기 : 게임도 공부가 된다! 게임을 만들며 즐겁게 배우는 코딩의 기초",
+     "author": "Haskins, Heath",
+     "call": "794.8 H351a K"
+    },
+    {
+     "title": "재미있는 게임 제작 프로세스 : 〈언차티드〉 개발자가 알려 주는 게임 디자인·제작 실무",
+     "author": "Lemarchand, Richard",
+     "call": "794.8 L548p K"
+    },
+    {
+     "title": "피, 땀, 리셋",
+     "author": "Schreier, Jason",
+     "call": "794.8 S378p K"
+    },
+    {
+     "title": "가상 세계와 온라인 게임의 심리학 : 프로테우스의 역설",
+     "author": "Yee, Nick",
+     "call": "794.8 Y42p K"
+    },
+    {
+     "title": "시드 마이어 : 컴퓨터 게임과 함께한 인생",
+     "author": "Meier, Sid",
+     "call": "794.8 M511s K"
+    },
+    {
+     "title": "Making games : the politics and poetics of game creation tools",
+     "author": "Werning, Stefan",
+     "call": "794.8 W496m"
+    },
+    {
+     "title": "Against flow : video games and the flowing subject",
+     "author": "Soderman, Braxton",
+     "call": "794.8 S679a"
+    },
+    {
+     "title": "모럴컴뱃 : 게임 중독과 게임의 폭력성을 둘러싼 잘못된 전쟁",
+     "author": "Markey, Patrick M",
+     "call": "794.8 M345m K"
+    },
+    {
+     "title": "보이지 않는 e스포츠 : 승리하는 팀의 마음가짐",
+     "author": "Andrejkovics, Zoltan",
+     "call": "794.8 A559i K"
+    },
+    {
+     "title": "On video games : the visual politics of race, gender and space",
+     "author": "Murray, Soraya",
+     "call": "794.8 M984o"
+    },
+    {
+     "title": "We deserve better villains : a video game design survival guide",
+     "author": "Kristjan, Jai",
+     "call": "794.8 K92w"
+    },
+    {
+     "title": "Classical antiquity in video games : playing with the ancient world",
+     "author": "Rollinger, Christian",
+     "call": "794.8 C614"
+    },
+    {
+     "title": "Open world empire : race, erotics, and the global rise of video games",
+     "author": "Patterson, Christopher B",
+     "call": "794.8 P317o"
+    },
+    {
+     "title": "한 권으로 끝내는 게임 사업 + 게임 마케팅 : 개발사를 위한 유저 확보·퍼블리싱·라이브 운영 실무 가이드",
+     "author": "알로하팩토리",
+     "call": "794.8 알235ㅎ"
+    },
+    {
+     "title": "e스포츠개론 : e스포츠의 이해와 산업",
+     "author": "한국e스포츠산업학회",
+     "call": "794.8 한17e"
+    },
+    {
+     "title": "(현업 기획자 마이즈가 알려주는) 게임 시나리오 스쿨 : 스토리를 넘어 플레이를 설계하는 법",
+     "author": "김현석",
+     "call": "794.8 김941ㄱ"
+    },
+    {
+     "title": "보이지 않는 e스포츠 : 승리하는 팀의 마음가짐 / 개정판",
+     "author": "Andrejkovics, Zoltan",
+     "call": "794.8 A559i K/2025"
+    },
+    {
+     "title": "세가 게임기 투쟁사 : 세가 게임기 40년의 기록 : 1983~2023",
+     "author": "오성 양보",
+     "call": "794.8 오53ㅅ K"
+    },
+    {
+     "title": "AI와 이스포츠",
+     "author": "최은경",
+     "call": "794.8 최68a"
+    },
+    {
+     "title": "게임 코러스",
+     "author": "영이",
+     "call": "794.8 영69ㄱ"
+    },
+    {
+     "title": "e스포츠의 이해 / 개정판",
+     "author": "이상호",
+     "call": "794.8 이511e 2024"
+    },
+    {
+     "title": "게임 시나리오 기획자를 위한 안내서 : 이론과 실무 그리고 포트폴리오까지, 게임 시나리오의 모든 것",
+     "author": "양정윤",
+     "call": "794.8 양73ㄱ"
+    },
+    {
+     "title": "우리는 왜 게임을 하는가? : 유희와 습관 그리고 또 하나의 세계가 되기까지",
+     "author": "하얀쥐",
+     "call": "794.8 하62ㅇ"
+    },
+    {
+     "title": "리그 오브 레전드 : e스포츠를 하면서 즐기자",
+     "author": "강도경",
+     "call": "794.8 강225ㄹ"
+    },
+    {
+     "title": "(위대한 게임의 시작 :) 게임 시나리오 작법 : 플레이어를 몰입시키는 스토리텔링 기술부터 RPG, AOS, VR/AR 게임 기획까지 / 개정판",
+     "author": "이진희",
+     "call": "794.8 이79ㄱ 2024"
+    },
+    {
+     "title": "(게임 데이터 애널리스트가 알려주는) 게임 데이터 분석의 노하우",
+     "author": "ThinkingData",
+     "call": "794.8 T443ㅇ K"
+    },
+    {
+     "title": "사이버 루덴스 : 게임의 미학과 문화",
+     "author": "이동연",
+     "call": "794.8 사69"
+    },
+    {
+     "title": "게임 속 역사 이야기",
+     "author": "김동영",
+     "call": "794.8 김225ㄱ"
+    },
+    {
+     "title": "e스포츠 마케팅",
+     "author": "최경환",
+     "call": "794.8 최14e"
+    },
+    {
+     "title": "로블록스로 게임 만들기",
+     "author": "박필준",
+     "call": "794.8 박849ㄹ"
+    },
+    {
+     "title": "바둑 보드게임이 뭐야?",
+     "author": "장용희",
+     "call": "794.8 장66ㅂ"
+    },
+    {
+     "title": "세상을 바꾼 게임들",
+     "author": "김동현",
+     "call": "794.8 김2251ㅅ"
+    },
+    {
+     "title": "(당신이 몰랐으면 하는 K-게임) 사행성의 비밀",
+     "author": "고라",
+     "call": "794.8 고231ㅅ"
+    }
+   ],
+   "sources": [
+    "종합서지",
+    "키워드검색"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "102",
+   "call": "102",
+   "shelf_fit": 0.84,
+   "shelf_label": "일상·대중문화를 매개로 한 철학교양",
+   "fit_reasoning": "주제·관점 0.88, 자료 성격·용도 0.80으로 산술평균은 0.84이다. 서가 표본은 삶의 문제와 현대 문화·기술 소재를 철학적으로 풀어내는 대중 교양서, 철학 입문·사유 안내서가 반복된다. 신규 도서는 비디오 게임의 정의·재미·예술성·자유를 철학적으로 묻는 교양서여서, 대중문화에서 철학적 질문을 이끄는 자료들과 잘 맞는다. 다만 표본의 다수는 개인의 삶·행복·실천적 조언에 무게를 두는 반면, 이 책은 게임 매체의 개념과 미학적 쟁점을 중심으로 한다는 차이가 남는다.",
+   "cited_books": [
+    "오늘 내 기분은 철학으로 할래 : 디즈니는 귀엽고 코기토는 필요하니까",
+    "컴퓨터로 철학하기 : 파이썬으로 철학을 코딩하다",
+    "알고리즘으로 철학하기 : 코드 너머의 사유, 기술과 존재를 잇다",
+    "연결되었지만 외로운 사람들 : 고독을 잃어버린 스마트폰 시대의 철학"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "오늘 내 기분은 철학으로 할래 : 디즈니는 귀엽고 코기토는 필요하니까",
+     "desc": "디즈니 애니메이션 속 인물과 장면, OST에서 철학적 질문을 끌어내고 이를 통해 플라톤, 칸트, 니체 등 위대한 철학자들의 생각을 보여준다. 이 책은 ‘철학은 어렵고 딱딱하다’는 인식을 완전히 새롭게 바꿔줄 것이다."
+    },
+    {
+     "title": "컴퓨터로 철학하기 : 파이썬으로 철학을 코딩하다",
+     "desc": "철학의 오래된 질문들을 현대 기술의 도구로 다시 사유한다. 철학과 컴퓨터과학이라는 이질적 영역을 유기적으로 연결해, 인간의 사유와 기술적 사고를 통합하여 훈련하도록 돕는다."
+    },
+    {
+     "title": "알고리즘으로 철학하기 : 코드 너머의 사유, 기술과 존재를 잇다",
+     "desc": "‘알고리즘’이라는 개념을 단순히 컴퓨터과학의 기술적 도구로 보는 것이 아니라 인류가 살아가면서 직면하는 철학적 질문에 접근하는 새로운 방식으로 소개한다. 저자는 알고리즘이 어떻게 인간의 사고방식을 바꾸고, 우리가 진리나 자유, 존재에 대해 어떤 방식으…"
+    },
+    {
+     "title": "연결되었지만 외로운 사람들 : 고독을 잃어버린 스마트폰 시대의 철학",
+     "desc": "니체, 오르테가, 한나 아렌트, 파스칼과 같은 철학자의 이야기와 더불어 &lt;에반게리온&gt;, &lt;드라이브 마이 카&gt;, &lt;용쟁호투&gt; 등 대중문화를 곁들여 현대인이 어떻게 병들어 있는지를 짚어주며, ‘쾌락적 나른함’, ‘우울증적 …"
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "중요한 건 눈에 보이지 않아 : 어린 왕자로 철학하기",
+     "author": "Fossois, Gwendal",
+     "call": "102 F752p K"
+    },
+    {
+     "title": "마침표의 순간들 : 아직 끝내는 것이 어려운 사람을 위한 철학 연습",
+     "author": "Galabru, Sophie",
+     "call": "102 G146n K"
+    },
+    {
+     "title": "컴퓨터로 철학하기 : 파이썬으로 철학을 코딩하다",
+     "author": "Lim, Daniel",
+     "call": "102 L732p K"
+    },
+    {
+     "title": "철학은 왜 우리를 행복하게 하는가 : 좋은 삶을 위한 한 철학자의 통찰",
+     "author": "Sandel, Adam Adatto",
+     "call": "102 S214h K"
+    },
+    {
+     "title": "철학의 쓸모 : 삶의 지침이 되는 철학 사용 설명서",
+     "author": "Devillairs, Laurence",
+     "call": "102 D494g K"
+    },
+    {
+     "title": "철학의 위안 : 불안한 존재들을 위하여 / 제2판",
+     "author": "De Botton, Alain",
+     "call": "102 D278c K/2023"
+    },
+    {
+     "title": "내면의 삶 : 인생은 어떻게 풍요로워지는가",
+     "author": "Lenoir, Frédéric",
+     "call": "102 L571p K/2023"
+    },
+    {
+     "title": "오늘 내 기분은 철학으로 할래 : 디즈니는 귀엽고 코기토는 필요하니까",
+     "author": "Chaillan, Marianne",
+     "call": "102 C434i K"
+    },
+    {
+     "title": "세상이 온통 회색으로 보이면 코끼리를 움직여봐",
+     "author": "Seys, Pascayle",
+     "call": "102 S521s K"
+    },
+    {
+     "title": "철학이 삶을 위로할 때 : 더 나은 인생을 위한 철학자의 말들",
+     "author": "Kamphuis, Lammert",
+     "call": "102 K15f K"
+    },
+    {
+     "title": "소크라테스 익스프레스 : 철학이 우리 인생에 스며드는 순간",
+     "author": "Weiner, Eric",
+     "call": "102 W423s K"
+    },
+    {
+     "title": "명예, 부, 권력에 관한 사색 : 무미건조한 세계에서 저자와 독자가 살아남으려면",
+     "author": "당낙",
+     "call": "102 당211ㅇ K"
+    },
+    {
+     "title": "관광객의 철학",
+     "author": "동 호기",
+     "call": "102 동95ㄱ K"
+    },
+    {
+     "title": "철학의 숲 : 동화와 신화 속에 숨겨진 26가지 생각 씨앗을 찾아서",
+     "author": "O'Donoghue, Brendan",
+     "call": "102 O 26a K"
+    },
+    {
+     "title": "하버드 철학자들의 인생수업 : 나는 무엇으로 사는가",
+     "author": "Klein, Daniel M.",
+     "call": "102 K641i K"
+    },
+    {
+     "title": "The Socrates express : in search of life lessons from dead philosophers",
+     "author": "Weiner, Eric",
+     "call": "102 W423s"
+    },
+    {
+     "title": "철학은 어떻게 삶의 무기가 되는가 : 불확실한 삶을 돌파하는 50가지 생각 도구",
+     "author": "산구 주",
+     "call": "102 산17ㅁ K"
+    },
+    {
+     "title": "중동태의 세계 : 의지와 책임의 고고학",
+     "author": "국분 공일랑",
+     "call": "102 국47ㅈ K"
+    },
+    {
+     "title": "철학이 필요한 순간 : 삶의 의미를 되찾는 10가지 생각",
+     "author": "Brinkmann, Svend",
+     "call": "102 B858s K"
+    },
+    {
+     "title": "생각의 차이 : 일상과 철학의 만남 마음을 열고 세상을 보라!",
+     "author": "Ferner, Adam",
+     "call": "102 F364t K"
+    },
+    {
+     "title": "욕먹지 않기 위한 깨달음 : 일상의 철학",
+     "author": "김정익",
+     "call": "102 김735ㅇ"
+    },
+    {
+     "title": "어쨌든, 니체x정약용 : 질문으로 넘어서고, 삶으로 증명하다",
+     "author": "김이율",
+     "call": "102 김69ㅇ"
+    },
+    {
+     "title": "서른을 위한 최소한의 철학 수업 : 흔들리는 인생 앞에서 다시 읽는 위대한 문장들",
+     "author": "최영원",
+     "call": "102 최64ㅅ"
+    },
+    {
+     "title": "꿈꿀 권리 : 희망이 사라진 자리에서 철학이 말을 건네다",
+     "author": "희망철학연구소",
+     "call": "102 희31ㄱ"
+    },
+    {
+     "title": "친절한 철학 : 역사 속에서 만나는 문턱의 철학",
+     "author": "강나래",
+     "call": "102 강2111ㅊ"
+    },
+    {
+     "title": "인공지능시대와 철학의 쓸모 : 인공지능은 철학의 종말을 꿈꾸는가?",
+     "author": "이기상",
+     "call": "102 이19ㅇ"
+    },
+    {
+     "title": "모양 없는 육체",
+     "author": "김곡",
+     "call": "102 김15ㅁ"
+    },
+    {
+     "title": "덜 멍청하게 살기 위한 최소한의 철학 : 멍청함은 지능이 아니라 태도다",
+     "author": "Svendsen, Lars Fr. H.",
+     "call": "102 S968d K"
+    },
+    {
+     "title": "생활공부와 현명한 관념론의 길",
+     "author": "김영민",
+     "call": "102 김64ㅅㅎ"
+    },
+    {
+     "title": "초월자의 조건 : 야망은 큰데 왜 아직도 평범한가",
+     "author": "이클립스",
+     "call": "102 이828ㅊ"
+    },
+    {
+     "title": "철학에 기대는 밤 : 내 삶을 채우고 밀어 올려준 힘센 문장들 : 이진민 철학 에세이",
+     "author": "이진민",
+     "call": "102 이793ㅊ"
+    },
+    {
+     "title": "연결되었지만 외로운 사람들 : 고독을 잃어버린 스마트폰 시대의 철학",
+     "author": "곡천 가호",
+     "call": "102 곡813ㅅ K"
+    },
+    {
+     "title": "철학으로 돌파하라 : 변화의 시대, 불안을 기대로 바꿔줄 43가지 지혜의 도구",
+     "author": "안광복",
+     "call": "102 안16ㅊㅎ"
+    },
+    {
+     "title": "양자적 인간 : 인과론적 사유에서 성과론적 사유로 / [개정 증보판]",
+     "author": "김환규",
+     "call": "102 김961ㅇ 2025"
+    },
+    {
+     "title": "탁월한 생각은 철학에서 시작된다",
+     "author": "소천 인지",
+     "call": "102 소813ㅇㄷ K"
+    },
+    {
+     "title": "모든 존재는 행복할 권리가 있다 : 미소의 편지들 : 강남순 철학 에세이",
+     "author": "강남순",
+     "call": "102 강211ㅁㄷ"
+    },
+    {
+     "title": "알고리즘으로 철학하기 : 코드 너머의 사유, 기술과 존재를 잇다",
+     "author": "변정수",
+     "call": "102 변73ㅇ"
+    },
+    {
+     "title": "행복의 정수(精髓), 쾌락의 원천 : 삶, 죽음, 종교, 사랑에 대한 성찰",
+     "author": "장국현",
+     "call": "102 장17ㅎ"
+    },
+    {
+     "title": "철학과 나침반 : 일상의 언어로 철학을 전하는 깊은 사유의 기술. 2",
+     "author": "최동석",
+     "call": "102 최225ㅊㅎ v.2"
+    },
+    {
+     "title": "철학의 기본",
+     "author": "강본 유일랑",
+     "call": "102 강45ㅊ K"
+    }
+   ],
+   "sources": [
+    "082"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "101",
+   "call": "101",
+   "shelf_fit": 0.54,
+   "shelf_label": "철학의 방법론과 대중적 입문",
+   "fit_reasoning": "표본은 철학 자체의 성격·방법론·메타철학을 분석하는 전문 연구서가 중심이며, 일반 독자를 위한 철학 입문과 일상적 철학 안내서도 함께 반복된다. 신규 도서는 비디오게임의 정의, 자유, 예술성 등을 철학적 질문으로 다루므로 철학을 친숙한 소재로 풀어내는 입문·교양적 측면에서는 맞닿는다. 다만 게임이라는 특정 문화콘텐츠의 미학·장르 논의가 중심이어서 철학 일반의 방법론과 성격을 주로 다루는 표본의 핵심 초점과는 거리가 있다. 주제·관점 0.43, 자료 성격·용도 0.65.",
+   "cited_books": [
+    "메타철학이란 무엇인가?",
+    "철학으로 묻고 삶으로 답하라 : 뤽 페리의 인생론",
+    "스무살, 철학에 로그인하다: 크고 작은 철학문제의 발자취를 따라",
+    "실험철학 : 비판적 연구"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "메타철학이란 무엇인가?",
+     "desc": "영어권에서는 처음으로 “메타철학(형이상학)”이라는 제목으로 나온 입문서이다. 철학이란 무엇인가?라는 단순 물음에서부터, 인문학과의 관련성, 분석철학과 대륙철학, 진리의 추구에 이르기까지 철학의 기초적이고 입문적인 면은 거의 모두 다루었다고 보아도 과장…"
+    },
+    {
+     "title": "철학으로 묻고 삶으로 답하라 : 뤽 페리의 인생론",
+     "desc": "전 프랑스 교육부 장관이자 유럽의 대표적 지성 뤽 페리가 전하는 삶을 위한 인문학. 외딴 휴가지에서 친구들과 그 자녀들에게 들려준 강의에서 시작되어 베스트셀러가 된 이 책은 생생하고 친근한 대화체로 철학의 주요 사상들을 명쾌하게 풀어낸다."
+    },
+    {
+     "title": "스무살, 철학에 로그인하다: 크고 작은 철학문제의 발자취를 따라",
+     "desc": "사물은 우리가 보는 그대로인가? 죽은 후에도 삶은 존재하는가? 그리고 왜 섹스는 즐겁고 죽음은 그렇지 않은가? 철학은 지루하지 않아야 하고 복잡하지도 않아야 한다. 즉, 철학적 문제는 우리의 일상생활과 많은 관련이 있다. 철학자 미하엘 슈미트-살로몬과…"
+    },
+    {
+     "title": "실험철학 : 비판적 연구",
+     "desc": "실험철학(experimental philosophy)은 21세기 벽두에 태동하여 약 20여 년 이상 숱한 토론과 논쟁을 불러일으키면서 진행되어 온 새로운 철학 운동이다. 이 운동은 “실험”이라는 과학의 경험적 방법론을 내세워 철학의 새로운 패러다임을 …"
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "실험철학 : 비판적 연구",
+     "author": "Mukerji, Nikil",
+     "call": "101 M953e K"
+    },
+    {
+     "title": "사고실험 : 복잡한 세상을 쪼개어 단순하게 이해하려는 시도",
+     "author": "Levy, Joel",
+     "call": "101 L668i K"
+    },
+    {
+     "title": "Doing philosophy : from common curiosity to logical reasoning",
+     "author": "Williamson, Timothy",
+     "call": "101 W732d"
+    },
+    {
+     "title": "Collingwood on philosophical methodology",
+     "author": "Dharamsi, Karim",
+     "call": "101 C711"
+    },
+    {
+     "title": "The Cambridge companion to philosophical methodology",
+     "author": "Overgaard, Soren",
+     "call": "101 C178"
+    },
+    {
+     "title": "The Oxford handbook of philosophical methodology",
+     "author": "Cappelen, Herman",
+     "call": "101 O 98"
+    },
+    {
+     "title": "Philosophische Praxis als Existenzmitteilung",
+     "author": "Gutknecht, Thomas",
+     "call": "101 P568"
+    },
+    {
+     "title": "철학으로 묻고 삶으로 답하라 : 뤽 페리의 인생론",
+     "author": "Ferry, Luc",
+     "call": "101 F399a K/2015"
+    },
+    {
+     "title": "메타철학이란 무엇인가?",
+     "author": "Overgaard, Soren",
+     "call": "101 O 96i K"
+    },
+    {
+     "title": "Metaphilosophy : philosophy in philosophical perspective",
+     "author": "Rescher, Nicholas",
+     "call": "101 R431m"
+    },
+    {
+     "title": "Philosophical methodology : the armchair or the laboratory?",
+     "author": "Haug, Matthew C",
+     "call": "101 P5681"
+    },
+    {
+     "title": "An introduction to metaphilosophy",
+     "author": "Overgaard, Soren",
+     "call": "101 O 96i"
+    },
+    {
+     "title": "Principles of non-philosophy",
+     "author": "Laruelle, François",
+     "call": "101 L336p E"
+    },
+    {
+     "title": "Truth by analysis : games, names, and philosophy",
+     "author": "McGinn, Colin",
+     "call": "101 M145t"
+    },
+    {
+     "title": "Philosophy without intuitions",
+     "author": "Cappelen, Herman",
+     "call": "101 C247p"
+    },
+    {
+     "title": "Why philosophize? the thought of deed",
+     "author": "Helmridge-Marsillian, Allan",
+     "call": "101 H481w"
+    },
+    {
+     "title": "The philosophical dialogue : a poetics and a hermeneutics",
+     "author": "Hösle, Vittorio",
+     "call": "101 H826p E"
+    },
+    {
+     "title": "Controversy spaces : a model of scientific and philosophical change",
+     "author": "Nudler, Oscar",
+     "call": "101 C764"
+    },
+    {
+     "title": "Werke im Werden : über die Genesis philosophischer Einsichten",
+     "author": "Henrich, Dieter",
+     "call": "101 H518w"
+    },
+    {
+     "title": "철학의 과업",
+     "author": "MacIntyre, Alasdair Chalmers",
+     "call": "101 M152t K"
+    },
+    {
+     "title": "Condillac and his reception : on the origin and nature of human abilities",
+     "author": "Antoine-Mahut, Delphine",
+     "call": "101 C745C"
+    },
+    {
+     "title": "필로코믹스 : 10명의 철학자가 말하는 행복의 비결",
+     "author": "Vermer, Jérôme",
+     "call": "101 V523p K"
+    },
+    {
+     "title": "Guide philosophique des déchets",
+     "author": "Coudray, Jean-Luc",
+     "call": "101 C854g"
+    },
+    {
+     "title": "(다시 이어지다:) 궁극의 욕망을 찾아서 : 명상가 한바다와 종교학자 성해영의 만남",
+     "author": "한바다",
+     "call": "101 한41ㄱ"
+    },
+    {
+     "title": "일반성의 철학과 포노로지",
+     "author": "박정진",
+     "call": "101 박73ㅇ"
+    },
+    {
+     "title": "문명이 낳은 철학 철학이 바꾼 역사",
+     "author": "이정우",
+     "call": "101 문34"
+    },
+    {
+     "title": "니체야 놀자 : 超人이 道人을 만났을 때",
+     "author": "박정진",
+     "call": "101 박73ㄴ"
+    },
+    {
+     "title": "빛의 철학 소리철학",
+     "author": "박정진",
+     "call": "101 박73ㅂ"
+    },
+    {
+     "title": "철학의 선물 선물의 철학",
+     "author": "박정진",
+     "call": "101 박73ㅊ"
+    },
+    {
+     "title": "소리의 철학 포노로지",
+     "author": "박정진",
+     "call": "101 박73ㅅ"
+    },
+    {
+     "title": "스무살, 철학에 로그인하다: 크고 작은 철학문제의 발자취를 따라",
+     "author": "Schmidt-Salomon, Michael",
+     "call": "101 S354 l K"
+    },
+    {
+     "title": "교양인의 삶: 과학과 철학의 소통",
+     "author": "이정일",
+     "call": "101 이73ㄱㅇ"
+    },
+    {
+     "title": "공공철학이란 무엇인가",
+     "author": "산협 직사",
+     "call": "101 산94ㄱ K"
+    },
+    {
+     "title": "Lust am Logos",
+     "author": "Gutknecht, Thomas",
+     "call": "101 L972"
+    },
+    {
+     "title": "철학적 양자론: 상대론적 세계관",
+     "author": "하기남",
+     "call": "101 하19ㅊ"
+    },
+    {
+     "title": "The nature and future of philosophy",
+     "author": "Dummett, Michael A. E.",
+     "call": "101 D889n"
+    },
+    {
+     "title": "붓다와 다윈이 만난다면",
+     "author": "안성두",
+     "call": "101 붓221"
+    },
+    {
+     "title": "今道友信わが哲學を語る : 今, 私達は何をなすべきか",
+     "author": "금도 우신",
+     "call": "101 금225ㄱ"
+    },
+    {
+     "title": "反哲學入門",
+     "author": "목전 원",
+     "call": "101 목73ㅂ"
+    },
+    {
+     "title": "The philosopher's toolkit : a compendium of philosophical concepts and methods / 2nd ed",
+     "author": "Baggini, Julian",
+     "call": "101 B144p 2010"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "032.02",
+   "call": "032.02",
+   "shelf_fit": 0.32,
+   "shelf_label": "호기심·잡학 중심의 대중 교양 안내서",
+   "fit_reasoning": "서가 표본은 일상의 궁금증, 세계 기록, 불가사의, 다양한 분야의 잡학을 짧고 흥미롭게 전달하는 대중 교양·질문답변 자료가 반복된다. 신규 도서는 비디오 게임을 친숙한 문화 콘텐츠로 삼아 정의·재미·예술성 등을 묻는 교양적 접근이라는 점에서는 일부 맞닿는다. 다만 여러 분야의 사실과 호기심을 망라하는 잡학·참고 성격보다 게임 자체를 철학적으로 분석하는 단일 주제의 논의가 중심이다. 주제·관점 0.25, 자료 성격·용도 0.39로 산술평균은 0.32이다.",
+   "cited_books": [
+    "뉴욕도서관으로 온 엉뚱한 질문들",
+    "(잘난 척하고 싶을 때 꼭 알아야 할) 쓸데 있는 신비한 잡학사전",
+    "지식은 아름답다",
+    "동네 한 바퀴 생활 인문학 : 도시에서 만나는 공간과 사물의 흥미로운 속사정"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "뉴욕도서관으로 온 엉뚱한 질문들",
+     "desc": "웃음을 자아내는 엉뚱한 질문들은 당시 시대상과 사람들이 궁금해하던 구체적인 관심사를 담고 있다. 11명의 뉴욕공공도서관 사서들은 그 질문 가운데 106개를 간추려 답변을 달아 한 권의 책으로 엮었다."
+    },
+    {
+     "title": "(잘난 척하고 싶을 때 꼭 알아야 할) 쓸데 있는 신비한 잡학사전",
+     "desc": "영국 남자 레이 해밀턴이 자신의 책을 고른 당신이 다른 이보다 조금이라도 지적인 사람이 될 수 있기를 바라면서 온갖 세세한, 오히려 잡다할 수 있을 정도로 모든 지식을 모은 것이다. 그렇다면 그는 왜 이 책을 썼을까?"
+    },
+    {
+     "title": "지식은 아름답다",
+     "desc": "인포그래픽 디자이너 데이비드 맥캔들리스의 책. 저자는 보이긴 하지만 잡히지 않는, 지나치게 복잡하고도 추상적인 정보를 간단하면서도 우아하게 표현해 낸다."
+    },
+    {
+     "title": "동네 한 바퀴 생활 인문학 : 도시에서 만나는 공간과 사물의 흥미로운 속사정",
+     "desc": "40년 경력의 목수이자 인기 칼럼니스트인 이 책의 저자 스파이크 칼슨은 어느 날 갑자기 나오지 않는 수돗물을 해결하려고 고군분투를 벌이다가 주변의 익숙한 모든 것에 대해 자신이 전혀 알지 못한다는 사실을 깨닫는다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "동네 한 바퀴 생활 인문학 : 도시에서 만나는 공간과 사물의 흥미로운 속사정",
+     "author": "Carlsen, Spike",
+     "call": "032.02 C284w K"
+    },
+    {
+     "title": "뉴욕도서관으로 온 엉뚱한 질문들",
+     "author": "New York Public Library",
+     "call": "032.02 N567p K"
+    },
+    {
+     "title": "있어빌리티 교양수업 : 상식 너머의 상식",
+     "author": "Herman, Sarah",
+     "call": "032.02 H551w K"
+    },
+    {
+     "title": "그리스 로마 인문학 산책 : 7일에 완성하는 서양 고전의 모든 것",
+     "author": "Taggart, Caroline",
+     "call": "032.02 T125c K"
+    },
+    {
+     "title": "(이코노미스트가 팩트체크한) 세계의 이면에 눈뜨는 지식들",
+     "author": "Standage, Tom",
+     "call": "032.02 S785g K"
+    },
+    {
+     "title": "(잘난 척하고 싶을 때 꼭 알아야 할) 쓸데 있는 신비한 잡학사전",
+     "author": "Hamilton, Ray",
+     "call": "032.02 H219k K"
+    },
+    {
+     "title": "Go figure : things you didn't know you didn't know : the economist explains",
+     "author": "Standage, Tom",
+     "call": "032.02 S785g"
+    },
+    {
+     "title": "지식은 아름답다",
+     "author": "McCandless, David",
+     "call": "032.02 M122k K"
+    },
+    {
+     "title": "정보는 아름답다",
+     "author": "McCandless, David",
+     "call": "032.02 M122i K"
+    },
+    {
+     "title": "Information is beautiful / New ed",
+     "author": "McCandless, David",
+     "call": "032.02 M122i 2012"
+    },
+    {
+     "title": "Guinness world records 2011",
+     "author": "Guinness World Records Limited",
+     "call": "R 032.02 G964g 2011"
+    },
+    {
+     "title": "위험한 책",
+     "author": "Iggulden, Conn",
+     "call": "032.02 I 24d K"
+    },
+    {
+     "title": "Time almanac 2010",
+     "author": "Time Magazine",
+     "call": "R 032.02 T583 2010"
+    },
+    {
+     "title": "The visual miscellaneum : a colorful guide to the world's most consequential trivia",
+     "author": "McCandless, David",
+     "call": "032.02 M122v"
+    },
+    {
+     "title": "(꼬리에 꼬리를 잇는) 상상초월 잡학사전",
+     "author": "Riggs, Ransom",
+     "call": "032.02 R569s K"
+    },
+    {
+     "title": "(알듯 말듯 헷갈리는) 절대 지식사전",
+     "author": "Mental floss LLC",
+     "call": "032.02 M549m K"
+    },
+    {
+     "title": "(분위기메이커로 떠오르는) 필수 교양사전",
+     "author": "Mental floss LLC",
+     "call": "032.02 M549me K"
+    },
+    {
+     "title": "(풀리지 않은) 세계의 불가사의",
+     "author": "Wilson, Colin",
+     "call": "032.02 W747u K"
+    },
+    {
+     "title": "Guinness world records, 2005 / 50th anniversary ed",
+     "author": "Guinness World Records Limited",
+     "call": "R 032.02 G964g 2005"
+    },
+    {
+     "title": "Guinness world records, 2004",
+     "author": "Guinness World Records Limited",
+     "call": "R 032.02 G964g 2004"
+    },
+    {
+     "title": "(1일 1편) 신박한 잡학사전 365",
+     "author": "McNeal, Cary",
+     "call": "032.02 M478t K"
+    },
+    {
+     "title": "쓸모없지만 유쾌한 지식의 발견",
+     "author": "Botham, Noel",
+     "call": "032.02 B749u K"
+    },
+    {
+     "title": "A classical education : the stuff you wish you'd been taught at school",
+     "author": "Taggart, Caroline",
+     "call": "032.02 T125c"
+    },
+    {
+     "title": "Ripley's believe it or not! : prepare to be shocked!",
+     "author": "Tibballs, Geoff",
+     "call": "대 032.02 R591 v.5"
+    },
+    {
+     "title": "세계사 속의 토픽",
+     "author": "Zacks, Richard",
+     "call": "032.02 Z16u K"
+    },
+    {
+     "title": "성서 속의 암호 : 신들의 귀환",
+     "author": "Däniken, Erich von",
+     "call": "032.02 D186j K"
+    },
+    {
+     "title": "Famous first facts, international edition : a record of first happenings, discoveries, and inventions in world history",
+     "author": "Anzovin, Steven",
+     "call": "032.02 A637f"
+    },
+    {
+     "title": "신들의 비밀",
+     "author": "Däniken, Erich von",
+     "call": "032.02 D186o K/1997"
+    },
+    {
+     "title": "상식을 넘는 상식",
+     "author": "Zotti, Ed",
+     "call": "032.02 Z89k K"
+    },
+    {
+     "title": "개미는 왜 힘이 셀까: 과학의 기묘한 세계",
+     "author": "Achenbach, Joel",
+     "call": "032.02 A177w K"
+    },
+    {
+     "title": "상식의 허실",
+     "author": "Readers Digest Association",
+     "call": "032.02 F142 K"
+    },
+    {
+     "title": "기네스북",
+     "author": "McFarlan, Donald",
+     "call": "R 032.02 G964 1991/K"
+    },
+    {
+     "title": "세계 불가사의 백과",
+     "author": "Wilson, Colin",
+     "call": "032.02 W747e K"
+    },
+    {
+     "title": "Pears : cyclopaedia",
+     "author": "Cook, Christopher",
+     "call": "R 032.02 P361"
+    },
+    {
+     "title": "리더스 다이제스트 잡학사전: 우리주변의 사물에 얽힌 신기하고 재미있는 이야기",
+     "author": "Polley, Jane",
+     "call": "R 032.02 S884 K"
+    },
+    {
+     "title": "The big book of tell me why",
+     "author": "Leokum, Arkady",
+     "call": "032.02 L578b"
+    },
+    {
+     "title": "万物壽命事典: ブラックホ-ルから流行まで",
+     "author": "Kendig, Frank",
+     "call": "032.02 K33 l J"
+    },
+    {
+     "title": "神들의 비밀",
+     "author": "Däniken, Erich von",
+     "call": "032.02 D186o K"
+    },
+    {
+     "title": "Guinness book of world records",
+     "author": "McWhirter, Norris",
+     "call": "R 032.02 G964 1981"
+    },
+    {
+     "title": "Famous first facts : a record of first happenings, discoveries, and inventions in American history / 4th ed., expanded and rev",
+     "author": "Kane, Joseph Nathan",
+     "call": "R 032.02 K16f"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": false
+  }
+ ],
+ "ddc_082": "102",
+ "went_keyword": true,
+ "keyword_query": [
+  "비디오 게임",
+  "Video games",
+  "게임 철학",
+  "Philosophy",
+  "Games"
+ ],
+ "stage_messages": [
+  "082(102) 있음 → 본교에서 의미 확인 (본교에 해당 번호대 있음).",
+  "082(102) 서가 적합도 0.84 — 게이트 없이 후보로만 씁니다. 판정은 전체 후보를 모은 뒤 합니다.",
+  "종합서지 매칭: 「게임으로 철학하기 : 재미, 예술성, 장르 등 비디오 」 · DDC 24개 대학(서강 1개 제외) · KDC 9개(미집계).",
+  "DDC voting(순서 힌트): 794.801(15), 794.8(9) ※082(102)는 1단계에서 판단하므로 득표에서 제외.",
+  "키워드 검색(비디오 게임, 게임 철학, Philosophy, Games) · 2개 이상 매칭 · 12개 번호대 중 3개 채택.",
+  "검색어 중복 제거: Video games — 남은 검색어에 부분일치로 포함돼 한 단어로 칩니다(겹침 개수 계산 왜곡 방지).",
+  "키워드 후보: 793.01(2권), 032.02(1권), 101(1권)",
+  "이미 후보인 번호라 새로 만들지 않음(출처 라벨만 추가): 794.801"
+ ],
+ "outliers": [
+  {
+   "h": "793.01",
+   "call": "793.01",
+   "keyword_hits": 2,
+   "shelf_count": 3,
+   "mainstream_h": "794.801"
+  }
+ ]
+}

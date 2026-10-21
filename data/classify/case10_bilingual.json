@@ -1,0 +1,1264 @@
+{
+ "inherited": false,
+ "escalate": true,
+ "escalate_reason": "1순위 400.19(0.84)가 문턱은 넘지만, 2순위 400.42(0.82)와의 격차 0.02가 기준(0.15)에 못 미칩니다 — 상위 후보가 경합합니다. 사서가 갈라주세요.",
+ "top": "400.19",
+ "candidates": [
+  {
+   "h": "400.19",
+   "call": "400.19",
+   "shelf_fit": 0.87,
+   "shelf_label": "언어 처리·습득의 심리언어학 연구",
+   "fit_reasoning": "주제·관점 0.88, 자료 성격·용도 0.80. 서가 표본은 언어의 습득·산출·지각과 뇌·인지의 관계를 다루는 심리언어학 연구서, 개론서 및 다중언어 처리 연구가 반복되는 학술적 성격의 자료군이다. 신규 도서는 외국어 습득이 어려운 원인을 환경·맥락·뇌 작동 방식에서 설명하고 이중언어 경험을 중심에 두므로 언어습득과 다중언어의 심리적·인지적 관점에 잘 맞는다. 다만 한 권으로 이해하는 교양적 설명서 성격이 강해 보이며, 표본의 전문 연구서·대학 교재·핸드북 중심 이용 목적과는 다소 차이가 남는다.",
+   "cited_books": [
+    "언어는 어떻게 인간을 바꾸는가 : 뇌를 설계하고 사고를 확장하는 다중언어의 놀라운 힘",
+    "언어심리학 : 언어과학의 이해",
+    "The psychology of language : an integrated approach",
+    "중국 조선족 삼중언어자의 어휘 표상과 처리"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "언어는 어떻게 인간을 바꾸는가 : 뇌를 설계하고 사고를 확장하는 다중언어의 놀라운 힘",
+     "desc": "마리안이 오랜 시간 행한 자신의 연구를 바탕으로 '다중언어'의 놀라운 힘에 대해 쓴 책이다. 특히 저자는10여 개 언어가 가능한 다중언어 사용자로서의 경험담을 예시로 함께 담아 독자들이 쉽게 이해할 수 있도록 돕는다."
+    },
+    {
+     "title": "언어심리학 : 언어과학의 이해",
+     "desc": "언어의 습득, 산출, 이해에 관한 인지 정보처리 과정의 모든 것을 담아낸 책이다. 심리학, 언어학, 철학, 컴퓨터 과학, 신경과학, 신경생리학을 비롯한 관련 분야의 다양한 관점을 담아 언어 연구를 위한 다학제적 접근을 취했다."
+    },
+    {
+     "title": "The psychology of language : an integrated approach",
+     "desc": "전통 심리언어학의 경계를 넘어 발달·신경과학 연구를 각 장에 통합한 책. 이중언어와 수어를 다루는 별도의 장을 포함하며, 언어습득과 언어사용의 사회적 측면을 함께 조명한다."
+    },
+    {
+     "title": "중국 조선족 삼중언어자의 어휘 표상과 처리",
+     "desc": "중국 조선족 삼중언어자를 다루는 책이다. 이들은 삼중언어자로서 특별한 상황에 있다. 삼중언어자의 언어표상과 처리에 대한 모형을 구성하고 검증하는 연구로, 중국 조선족의 언어교육과 언어정책에도 많은 시사점을 줄 것이다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "언어는 어떻게 인간을 바꾸는가 : 뇌를 설계하고 사고를 확장하는 다중언어의 놀라운 힘",
+     "author": "Marianne, Viorica",
+     "call": "400.19 M333p K"
+    },
+    {
+     "title": "Beyond disfluency : the interplay of speech, gesture, and interaction",
+     "author": "Kosmala, Loulou",
+     "call": "400.19 K86b"
+    },
+    {
+     "title": "Redoing linguistic worlds : unmaking gender binaries, remaking gender pluralities",
+     "author": "Knisely, Kris Aric",
+     "call": "400.19 R319"
+    },
+    {
+     "title": "언어심리학 : 언어과학의 이해",
+     "author": "Traxler, Matthew J",
+     "call": "400.19 T783i 2023/ K"
+    },
+    {
+     "title": "제기랄, 이런! : 욕설의 인지신경언어학",
+     "author": "Bergen, Benjamin K",
+     "call": "400.19 B495w K"
+    },
+    {
+     "title": "언어와 사고",
+     "author": "금정 무쓰미",
+     "call": "400.19 금73ㄱ K"
+    },
+    {
+     "title": "The language game : how improvisation created language and changed the world",
+     "author": "Christiansen, Morten H.",
+     "call": "400.19 C555 l"
+    },
+    {
+     "title": "The handbook of speech perception / 2nd ed",
+     "author": "Pardo, Jennifer S.",
+     "call": "400.19 H237 2021"
+    },
+    {
+     "title": "Concepts, frames and cascades in semantics, cognition and ontology",
+     "author": "Löbner, Sebastian",
+     "call": "400.19 C744"
+    },
+    {
+     "title": "심리언어학, 말과 마음의 학문",
+     "author": "Field, John",
+     "call": "400.19 F454ps K"
+    },
+    {
+     "title": "Reading beyond the code : literature and relevance theory",
+     "author": "Cave, Terence",
+     "call": "400.19 R287"
+    },
+    {
+     "title": "Exploring student loneliness in higher education : a discursive psychology approach",
+     "author": "Oakley, Lee",
+     "call": "400.19 O 11e"
+    },
+    {
+     "title": "Language creativity : a semiotic perspective",
+     "author": "Casini, Simone",
+     "call": "400.19 C339 l"
+    },
+    {
+     "title": "언어심리 : 핵심 주제",
+     "author": "김영진",
+     "call": "400.19 김64ㅇ"
+    },
+    {
+     "title": "The handbook of psycholinguistics",
+     "author": "Fernández, Eva M.",
+     "call": "400.19 H2361"
+    },
+    {
+     "title": "Consciousness, language, and self : psychoanalytic, linguistic, and anthropological explorations of the dual nature of mind",
+     "author": "Robbins, Michael",
+     "call": "400.19 R635c"
+    },
+    {
+     "title": "언어학자와 무의식",
+     "author": "Arrive>, Michel",
+     "call": "400.19 A777 li K"
+    },
+    {
+     "title": "Creating language : integrating evolution, acquisition, and processing",
+     "author": "Christiansen, Morten H.",
+     "call": "400.19 C555c"
+    },
+    {
+     "title": "What the f what swearing reveals about our language, our brains, and ourselves",
+     "author": "Bergen, Benjamin K",
+     "call": "400.19 B495w"
+    },
+    {
+     "title": "The psychology of language : an integrated approach",
+     "author": "Ludden, David",
+     "call": "400.19 L944p"
+    },
+    {
+     "title": "언어심리 / 개정판",
+     "author": "정성숙",
+     "call": "400.19 정53ㅇ 2021"
+    },
+    {
+     "title": "언어는 마음을 담는다 / 개정판",
+     "author": "박지영",
+     "call": "400.19 박79ㅇ 2020"
+    },
+    {
+     "title": "중국 조선족 삼중언어자의 어휘 표상과 처리",
+     "author": "김철수",
+     "call": "400.19 김813ㅈ"
+    },
+    {
+     "title": "언어는 마음을 담는다 : 언어에 대해 우리가 몰랐거나 잊고 있던 것들",
+     "author": "박지영",
+     "call": "400.19 박79ㅇ"
+    },
+    {
+     "title": "가상 이동 : 인지언어학적 접근법",
+     "author": "임태성",
+     "call": "400.19 임832ㄱ"
+    },
+    {
+     "title": "한·중 마음(心) 표현의 인지언어학적 탐색 : 한국어와 중국어의 마음 연구",
+     "author": "최풍혜",
+     "call": "400.19 최847ㅎ"
+    },
+    {
+     "title": "사고와 언어",
+     "author": "Potebnia, Aleksandr Afanasʹevich",
+     "call": "400.19 P861m K"
+    },
+    {
+     "title": "Emotion and discourse in L2 narrative research",
+     "author": "Prior, Matthew T",
+     "call": "400.19 P958e"
+    },
+    {
+     "title": "구어 능력 발달 연구",
+     "author": "장경희",
+     "call": "400.19 구63"
+    },
+    {
+     "title": "Language, space and mind: the conceptual geometry of linguistic meaning",
+     "author": "Chilton, Paul A.",
+     "call": "400.19 C538 l"
+    },
+    {
+     "title": "A history of psycholinguistics : the pre-Chomskyan era",
+     "author": "Levelt, W.J.M",
+     "call": "400.19 L657h"
+    },
+    {
+     "title": "Sprachpsychologie",
+     "author": "Galliker, Mark",
+     "call": "400.19 G168s"
+    },
+    {
+     "title": "Sprache und Emotion / 2. Aufl",
+     "author": "Schwarz-Friesel, Monika",
+     "call": "400.19 S411s 2013"
+    },
+    {
+     "title": "Psycholinguistik - Neurolinguistik",
+     "author": "Müller, Horst M.",
+     "call": "400.19 M958p"
+    },
+    {
+     "title": "Representing space in cognition: interrelations of behaviour, language, and formal models",
+     "author": "Tenbrink, Thora",
+     "call": "400.19 R425"
+    },
+    {
+     "title": "Dialogical genres : empractical and conversational listening and speaking",
+     "author": "O'Connell, Daniel C.",
+     "call": "400.19 O 18d"
+    },
+    {
+     "title": "Emotion in interaction",
+     "author": "Peräkylä, Anssi",
+     "call": "400.19 E54"
+    },
+    {
+     "title": "The Cambridge handbook of psycholinguistics",
+     "author": "Spivey, Michael",
+     "call": "400.19 C178"
+    },
+    {
+     "title": "Psycholinguistik / 2nd ed",
+     "author": "Höhle, Barbara",
+     "call": "400.19 P9745 2012"
+    },
+    {
+     "title": "언어심리학 101",
+     "author": "Cowles, H. Wind",
+     "call": "400.19 C875p K"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "400.193",
+   "call": "400.193",
+   "shelf_fit": 0.78,
+   "shelf_label": "제2언어 습득 이론·심리와 연구",
+   "fit_reasoning": "서가 표본은 제2언어 습득, 언어발달, 이중언어성과 언어 처리·교육을 학술 이론과 연구서 중심으로 다루며, 일부는 학습 경험을 풀어낸 교양서도 포함한다. 신규 도서는 외국어가 말로 나오지 않는 이유를 환경·맥락과 뇌의 작동, 언어습득 구조로 설명하므로 제2언어 습득과 심리적 과정이라는 중심 주제에 부합한다. 다만 한 권으로 이해하는 대중적 설명서 성격이 강해 전문 연구·이론서와는 이용 수준에 차이가 있다. 주제·관점 0.86, 자료 성격·용도 0.68으로 산술평균 0.77이다.",
+   "cited_books": [
+    "제2언어 습득 : 여덟 개의 핵심 주제들",
+    "이중언어의 기쁨과 슬픔 : 한 언어심리학자의 자아 상실과 회복에 관한 이야기",
+    "Autonomy support beyond the language learning classroom : a self-determination theory perspective"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "제2언어 습득 : 여덟 개의 핵심 주제들",
+     "desc": "언어 간 연결, 습득의 최적 연령, 문법의 역할, 어휘 습득, 제2언어 쓰기, 태도와 동기 등 8가지 핵심 질문을 독립된 장으로 다루는 SLA 입문서(Vivian Cook)."
+    },
+    {
+     "title": "이중언어의 기쁨과 슬픔 : 한 언어심리학자의 자아 상실과 회복에 관한 이야기",
+     "desc": "저자 줄리 세디비는 언어심리학자다. 책 전반에 걸쳐 저자는 언어심리에 관한 다양한 질문에 답한다. 이를 설명하기 위해 저자가 가져오는 사례들은 무척 흥미롭다."
+    },
+    {
+     "title": "Autonomy support beyond the language learning classroom : a self-determination theory perspective",
+     "desc": "자기결정성이론(SDT)을 교실 밖 언어학습 지원에 적용한 논문집(Mynard·Shelton-Strong 편). 학습 공간·커뮤니티·관계, 러닝 어드바이징 등 다양한 맥락에서 학습자 자율성을 어떻게 지지할지 다룬다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "Lifespan acquisition and language change : historical sociolinguistic perspectives",
+     "author": "Sanz Sánchez, Israel",
+     "call": "400.193 L722"
+    },
+    {
+     "title": "이중언어의 기쁨과 슬픔 : 한 언어심리학자의 자아 상실과 회복에 관한 이야기",
+     "author": "Sedivy, Julie",
+     "call": "400.193 S448m K"
+    },
+    {
+     "title": "Autonomy support beyond the language learning classroom : a self-determination theory perspective",
+     "author": "Mynard, Jo",
+     "call": "400.193 A939"
+    },
+    {
+     "title": "Vocabulary theory, patterning and teaching",
+     "author": "Szudarski, Pawel",
+     "call": "400.193 V872"
+    },
+    {
+     "title": "Exploring L1-L2 relationships : the impact of individual differences",
+     "author": "Sparks, Richard L",
+     "call": "400.193 S736e"
+    },
+    {
+     "title": "제2언어 습득 : 여덟 개의 핵심 주제들",
+     "author": "Cook, V. J",
+     "call": "400.193 C771k K"
+    },
+    {
+     "title": "언어 발달",
+     "author": "Brooks, Patricia J",
+     "call": "400.193 B873 l"
+    },
+    {
+     "title": "Memory speaks : on losing and reclaiming language and self",
+     "author": "Sedivy, Julie",
+     "call": "400.193 S448m"
+    },
+    {
+     "title": "Research on second language processing and processing instruction : studies in honor of Bill VanPatten",
+     "author": "Leeser, Michael J.",
+     "call": "400.193 R4325"
+    },
+    {
+     "title": "Language learning environments : spatial perspectives on SLA",
+     "author": "Benson, Phil",
+     "call": "400.193 B474 l"
+    },
+    {
+     "title": "Assessing speaking in context : expanding the construct and its applications",
+     "author": "Salaberry, M. Rafael",
+     "call": "400.193 A846"
+    },
+    {
+     "title": "Born to parse : how children select their languages",
+     "author": "Lightfoot, David",
+     "call": "400.193 L724b"
+    },
+    {
+     "title": "New trends in language acquisition within the generative perspective",
+     "author": "Guijarro Fuentes, Pedro",
+     "call": "400.193 N567"
+    },
+    {
+     "title": "The Cambridge handbook of language learning",
+     "author": "Schwieter, John W.",
+     "call": "400.193 C1781"
+    },
+    {
+     "title": "Born to talk : an introduction to speech and language development / 7th ed",
+     "author": "Hulit, Lloyd M",
+     "call": "400.193 H912b 2019"
+    },
+    {
+     "title": "Language, culture, and the embodied mind : a developmental model of linguaculture learning",
+     "author": "Shaules, Joseph",
+     "call": "400.193 S533 l"
+    },
+    {
+     "title": "The handbook of advanced proficiency in second language acquisition",
+     "author": "Malovrh, Paul A",
+     "call": "400.193 H2361"
+    },
+    {
+     "title": "The Routledge handbook of sociocultural theory and second language development",
+     "author": "Lantolf, James P",
+     "call": "400.193 R8691"
+    },
+    {
+     "title": "왜 우리만이 언어를 사용하는가 : 언어와 진화",
+     "author": "Berwick, Robert C",
+     "call": "400.193 C548w K"
+    },
+    {
+     "title": "Critical reflections on data in second language acquisition",
+     "author": "Gudmestad, Aarnes",
+     "call": "400.193 C934"
+    },
+    {
+     "title": "언어로 지구 정복 : 25개 언어를 배우고 현지에서 바로 써먹는 언어 습득 비결",
+     "author": "고야 수행",
+     "call": "400.193 고62ㅇ K"
+    },
+    {
+     "title": "여성결혼이민자의 중간언어 발달",
+     "author": "주월랑",
+     "call": "400.193 주67ㅇ"
+    },
+    {
+     "title": "언어발달 : 아동은 어떻게 언어를 습득해 가는가",
+     "author": "이현진",
+     "call": "400.193 이94ㅇ"
+    },
+    {
+     "title": "어쩌다보니 5개국어 능력자 : 들리는 외국어를 모두 내 것으로 만드는 기적의 바로바로 현지 언어 습득법",
+     "author": "염정은",
+     "call": "400.193 염73ㅇ"
+    },
+    {
+     "title": "Understanding second language acquisition / 2nd ed",
+     "author": "Ellis, Rod",
+     "call": "400.193 E47u 2015"
+    },
+    {
+     "title": "제2언어 습득의 이해",
+     "author": "Ellis, Rod",
+     "call": "400.193 E47u K/ 2014"
+    },
+    {
+     "title": "The Oxford handbook of language production",
+     "author": "Goldrick, Matthew Andrew",
+     "call": "400.193 O 98"
+    },
+    {
+     "title": "The Routledge handbook of second language acquisition",
+     "author": "Gass, Susan M",
+     "call": "400.193 R8692"
+    },
+    {
+     "title": "Rich languages from poor inputs",
+     "author": "Piattelli-Palmarini, Massimo",
+     "call": "400.193 R498"
+    },
+    {
+     "title": "The Routledge encyclopedia of second language acquisition",
+     "author": "Robinson, Peter Jake",
+     "call": "R 400.193 R869"
+    },
+    {
+     "title": "언어의 천재들 : 세계에서 가장 비범한 언어 학습자들을 찾아서",
+     "author": "Erard, Michael",
+     "call": "400.193 E65b K"
+    },
+    {
+     "title": "언어의 구축: 언어 습득의 용법 기반 이론",
+     "author": "Tomasello, Michael",
+     "call": "400.193 T655c K"
+    },
+    {
+     "title": "이중언어 발달: 언어와 문해력 그리고 인지",
+     "author": "Bialystok, Ellen",
+     "call": "400.193 B576b K"
+    },
+    {
+     "title": "Child language acquisition : contrasting theoretical approaches",
+     "author": "Ambridge, Ben",
+     "call": "400.193 A495c"
+    },
+    {
+     "title": "Syntactic development, its input and output",
+     "author": "Ninio, Anat",
+     "call": "400.193 N715s"
+    },
+    {
+     "title": "Die Matrix der menschlichen Entwicklung",
+     "author": "Hoffmann, Ludger",
+     "call": "400.193 M433"
+    },
+    {
+     "title": "Second language task complexity : researching the cognition hypothesis of language learning and performance",
+     "author": "Robinson, Peter",
+     "call": "400.193 S446"
+    },
+    {
+     "title": "Research methods in child language : a practical guide",
+     "author": "Hoff, Erika",
+     "call": "400.193 R432"
+    },
+    {
+     "title": "Continuum companion to second language acquisition",
+     "author": "Macaro, Ernesto",
+     "call": "400.193 C762"
+    },
+    {
+     "title": "Diachronic studies on information structure : language acquisition and change",
+     "author": "Ferraresi, Gisella",
+     "call": "400.193 D536"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "407",
+   "call": "407",
+   "shelf_fit": 0.76,
+   "shelf_label": "언어변이·언어습득 연구와 학습",
+   "fit_reasoning": "주제·관점 0.78, 자료 성격·용도 0.74로 산술평균은 0.76이다. 서가 표본은 방언·언어변화·사회언어학 등 언어학 연구서가 다수를 이루면서, 외국어 습득의 인지·심리적 기제와 학습법·평가를 다룬 연구서 및 교양서를 함께 포함한다. 신규 도서는 외국어가 익혀지지 않는 이유를 환경·맥락·뇌의 작동과 언어습득 구조로 설명하므로 이 습득·심리 관점과 잘 맞는다. 다만 표본의 상당수는 전문 언어학 연구·방법론 또는 실용 학습 안내이고, 이 책은 일반 독자를 위한 이중언어 및 학습 이해의 교양적 설명에 더 치우친 점이 남는다.",
+   "cited_books": [
+    "외국어 공부가 쉬워진다 : 인지심리학자의 조언",
+    "뇌과학 외국어 학습 혁명",
+    "Formulaic sequences : acquisition, processing, and use",
+    "Psychology in foreign language teaching"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "외국어 공부가 쉬워진다 : 인지심리학자의 조언",
+     "desc": "외국어 학습의 문제를 인지심리학과 신경과학의 입장에서 외국어 학습의 난제를 풀어낸 책이다. 외국어 학습의 특성과 외국어 학습이 다른 종류의 학습에 비해 유독 어려운 이유를 설명하고, 인간의 기억 구조와 특성 그리고 기억의 인지신경과학의 시각으로 외국어…"
+    },
+    {
+     "title": "뇌과학 외국어 학습 혁명",
+     "desc": "『외국어를 과학적으로 배우는 방법』 저자의 흥미와 주목도를 높이는 신개념 외국어 학습법. 가장 효율적인 외국어 학습법에 대하여 낱낱이 파헤친다. 저자는 언어를 익힐 때 최대 효과를 거두기 위해서는 흥미로운 인풋과 주목이 필요하다고 말한다."
+    },
+    {
+     "title": "Formulaic sequences : acquisition, processing, and use",
+     "desc": "정형화된 표현(formulaic sequences)이 모국어·외국어에서 어떻게 습득·처리되는지를 다룬 10편의 연구를 묶은 책. 코퍼스 빈도와 심리언어학적 실재성의 관계, 교수법적 함의까지 다룬다."
+    },
+    {
+     "title": "Psychology in foreign language teaching",
+     "desc": "외국어 교수법에 심리학적 관점을 적용한 개론서(McDonough, 1981/1992 개정). 외국어 학습자의 동기·태도·인지 과정을 교수 현장과 연결해 설명한다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "유럽의 언어 공통 참조기준이란 무엇인가",
+     "author": "Rosen, Évelyne",
+     "call": "407 R813p K"
+    },
+    {
+     "title": "The Routledge handbook of historical linguistics",
+     "author": "Bowern, Claire",
+     "call": "407 R869"
+    },
+    {
+     "title": "Dark tongues : the art of Rogues and Riddlers",
+     "author": "Heller-Roazen, Daniel",
+     "call": "407 H477d"
+    },
+    {
+     "title": "The dialect laboratory : dialects as a testing ground for theories of language change",
+     "author": "De Vogelaer, Gunther",
+     "call": "407 D536"
+    },
+    {
+     "title": "그곳은 소, 와인, 바다가 모두 빨갛다: 언어로 보는 문화",
+     "author": "Deutscher, Guy",
+     "call": "407 D486t K"
+    },
+    {
+     "title": "Through the language glass : why the world looks different in other languages",
+     "author": "Deutscher, Guy",
+     "call": "407 D486th"
+    },
+    {
+     "title": "Les franc*ais en e>mergence / 2e e>d",
+     "author": "Galazzi, Enrica",
+     "call": "407 F814 2008"
+    },
+    {
+     "title": "Formulaic sequences : acquisition, processing, and use",
+     "author": "Schmitt, Norbert",
+     "call": "407 F726"
+    },
+    {
+     "title": "Analyzing linguistic variation : statistical models and methods",
+     "author": "Paolillo, John C.",
+     "call": "407 P211a"
+    },
+    {
+     "title": "Style and sociolinguistic variation",
+     "author": "Eckert, Penelope",
+     "call": "407 S938"
+    },
+    {
+     "title": "The Dictionary of historical and comparative linguistics",
+     "author": "Trask, R. L",
+     "call": "407 T775d"
+    },
+    {
+     "title": "Dialectology / 2nd ed",
+     "author": "Chambers, J. K.",
+     "call": "407 C444d 1998"
+    },
+    {
+     "title": "Managing evaluation and innovation in language teaching : building bridges",
+     "author": "Rea-Dickins, Pauline",
+     "call": "407 M266"
+    },
+    {
+     "title": "Language change and functional explanations",
+     "author": "Gvozdanovic>, Jadranka",
+     "call": "407 L287"
+    },
+    {
+     "title": "Variation, change, and phonological theory",
+     "author": "Hinskens, Frans",
+     "call": "407 V299"
+    },
+    {
+     "title": "Language history, language change, and language relationship : an introduction to historical and comparative linguistics",
+     "author": "Hock, Hans Henrich",
+     "call": "407 H685 l"
+    },
+    {
+     "title": "언어지리유형학",
+     "author": "교본만태랑",
+     "call": "407 교45 1990/K"
+    },
+    {
+     "title": "Dialect and language variation",
+     "author": "Allen, Harold B.",
+     "call": "407 A426d"
+    },
+    {
+     "title": "방언학 개설",
+     "author": "Chambers, J. K",
+     "call": "407 C444d K"
+    },
+    {
+     "title": "方言學",
+     "author": "이익섭",
+     "call": "407 이69ㅂ"
+    },
+    {
+     "title": "뇌과학 외국어 학습 혁명",
+     "author": "이충호",
+     "call": "407 이817ㄴ"
+    },
+    {
+     "title": "외국어 공부가 쉬워진다 : 인지심리학자의 조언",
+     "author": "남기춘",
+     "call": "407 남19ㅇ"
+    },
+    {
+     "title": "세계 방언학의 풍경 : 여수 이상규 교수 퇴임기념 논문집",
+     "author": "여수 이상규 교수 퇴임기념 논문집 간행위원회",
+     "call": "407 세14"
+    },
+    {
+     "title": "살면서 외국어 하나쯤은 하고 싶다 : 6개월 안에 혼자 끝내는 외국어",
+     "author": "Lonsdale, Chris",
+     "call": "407 L862ㅇ K"
+    },
+    {
+     "title": "외국어, 저도 잘하고 싶습니다만..",
+     "author": "양혜영",
+     "call": "407 양94ㅇ"
+    },
+    {
+     "title": "외국어 잘 하는 법",
+     "author": "천야 영일",
+     "call": "407 천62ㅇ K"
+    },
+    {
+     "title": "외국어습득 두려워말라!: 우리인생 속에 그 해답이 있다",
+     "author": "구준서",
+     "call": "SM 407 구77ㅇ"
+    },
+    {
+     "title": "Im Spiegel der Sprache : warum die Welt in anderen Sprachen anders aussieht / 3. Aufl",
+     "author": "Deutscher, Guy",
+     "call": "407 D486t G/2011"
+    },
+    {
+     "title": "Nähe und Distanz im Kontext variationslinguistischer Forschung",
+     "author": "Ágel, Vilmos",
+     "call": "407 A265n"
+    },
+    {
+     "title": "외국어 평가의 이론과 실제",
+     "author": "신상근",
+     "call": "407 신51ㅇ"
+    },
+    {
+     "title": "Apprentissage d'une langue et interaction verbale : sollicitation, transmission et construction de connaissances linguistiques en situation exolingue / 2nd ed",
+     "author": "Matthey, Marinette",
+     "call": "407 M442a 2003"
+    },
+    {
+     "title": "方言學",
+     "author": "Chambers, J. K",
+     "call": "407 C444d 2002"
+    },
+    {
+     "title": "Second language learning : contrastive analysis, error analysis, and related aspects",
+     "author": "Robinett, Betty Wallace",
+     "call": "407 S445"
+    },
+    {
+     "title": "Psychology in foreign language teaching",
+     "author": "McDonough, Steven H.",
+     "call": "407 M136p"
+    },
+    {
+     "title": "方言學",
+     "author": "김공칠",
+     "call": "407 김15ㅂ"
+    },
+    {
+     "title": "Dialectology",
+     "author": "Chambers, Jack K.",
+     "call": "407 C444d"
+    },
+    {
+     "title": "Die Sprachgeographie",
+     "author": "Coseriu, Eugenio",
+     "call": "407 C834g G"
+    },
+    {
+     "title": "The genesic of language",
+     "author": "Hill, Kenneth C.",
+     "call": "407 H646g"
+    },
+    {
+     "title": "Role of sociolinguistics in foreign language education with reference to Korean and English terms of address and levels of deference",
+     "author": "황적륜",
+     "call": "407 황73r"
+    },
+    {
+     "title": "Strukturelle Sprachgeographie : eine Einfuehrung in Methodik und Ergebnisse",
+     "author": "Goossens, Jan",
+     "call": "407 G659s"
+    }
+   ],
+   "sources": [
+    "종합서지"
+   ],
+   "gold_match": false
+  },
+  {
+   "h": "400.42",
+   "call": "400.42",
+   "shelf_fit": 0.74,
+   "shelf_label": "이중언어 습득·처리와 다언어 교육 연구",
+   "fit_reasoning": "서가 표본은 이중·다언어 사용의 언어처리와 습득, 아동·교육 맥락, 언어접촉 및 다언어 사회를 다루는 언어학·교육학 연구서가 중심이다. 신규 도서는 외국어 습득이 어려운 원인을 환경·맥락과 뇌의 작동으로 설명하며 이중언어 이해를 중심에 두므로 주제적으로 잘 맞는다. 다만 표본의 다수는 전문 연구·학술서나 교육 연구인 반면, 이 책은 일반 독자의 언어 학습 이해를 위한 교양적 설명서 성격이 강하다. 주제·관점 0.88, 자료 성격·용도 0.76으로 산술평균은 0.82이다.",
+   "cited_books": [
+    "Cross-language influences in bilingual processing and second language acquisition",
+    "Bilingual : life and reality",
+    "The handbook of bilingualism",
+    "Growing up with two languages : a practical guide"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "Cross-language influences in bilingual processing and second language acquisition",
+     "desc": "하나의 언어를 아는 것이 다른 언어의 학습·사용에 미치는 영향을 다루는 논문집(Elgort 외 편). 음운·어휘·형태통사 영역의 교차언어 영향 연구를 검토하고 향후 방향을 제시한다."
+    },
+    {
+     "title": "Bilingual : life and reality",
+     "desc": "성인·아동 이중언어자의 삶을 아우르며 이중언어에 관한 통념을 깨는 개론서(Grosjean). 언어습득, 코드스위칭, 이중언어가 정체성과 감정 표현에 미치는 영향을 연구와 사례로 풀어낸다."
+    },
+    {
+     "title": "The handbook of bilingualism",
+     "desc": "이중언어 현상 전반 — 뇌 속 두 언어의 표상부터 이중언어 교육의 형태, 지역별 정책까지 — 을 총망라한 핸드북(Bhatia·Ritchie 편). 2013년 Choice 우수 학술도서로 선정되었다."
+    },
+    {
+     "title": "Growing up with two languages : a practical guide",
+     "desc": "이중언어 환경에서 아이를 키우는 가정과 관련 전문가를 위한 실용 가이드(Cunningham-Andersson). 전 세계 50여 가정의 사례를 바탕으로 이중언어 양육의 어려움과 지원 방법을 안내한다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "Cross-language influences in bilingual processing and second language acquisition",
+     "author": "Elgort, Irina",
+     "call": "400.42 C9512"
+    },
+    {
+     "title": "Multilingual perspectives on translanguaging",
+     "author": "MacSwan, Jeff",
+     "call": "400.42 M9611"
+    },
+    {
+     "title": "Language and cognitive aspects of child bilingualism : research observations and classroom applications",
+     "author": "Andreou, Maria",
+     "call": "400.42 A559 l"
+    },
+    {
+     "title": "Multilingual discourse production : diachronic and synchronic perspectives",
+     "author": "Kranich, Svenja",
+     "call": "400.42 M962"
+    },
+    {
+     "title": "Bilingual : life and reality",
+     "author": "Grosjean, Franc*ois",
+     "call": "400.42 G877b"
+    },
+    {
+     "title": "Studying bilinguals",
+     "author": "Grosjean, Franc*ois",
+     "call": "400.42 G877s"
+    },
+    {
+     "title": "The handbook of bilingualism",
+     "author": "Bhatia, Tej K.",
+     "call": "400.42 H236"
+    },
+    {
+     "title": "Languages in America: a pluralist view / 2nd ed",
+     "author": "Dicker, Susan J",
+     "call": "400.42 D549 l 2003"
+    },
+    {
+     "title": "Bilingualism : beyond basic principles",
+     "author": "Dewaele, Jean-Marc",
+     "call": "400.42 B5951"
+    },
+    {
+     "title": "Plurilingualitaet und Identitaet : Zur Selbst- und Fremdwahrnehmung mehrsprachiger Menschen",
+     "author": "De Florio-Hansen, Inez",
+     "call": "400.42 P737 2007"
+    },
+    {
+     "title": "Bilingual acquisition : theoretical implications of a case study",
+     "author": "Deuchar, M.",
+     "call": "400.42 D485b 2001"
+    },
+    {
+     "title": "Bilinguality and bilingualism / 2nd ed",
+     "author": "Hamers, Josiane F.",
+     "call": "400.42 H214b 2000/ E"
+    },
+    {
+     "title": "Cross-linguistic structures in simultaneous bilingualism",
+     "author": "Do@pke, Susanne",
+     "call": "400.42 C951"
+    },
+    {
+     "title": "Translating into success : cutting-edge strategies for going multilingual in a global age",
+     "author": "Sprung, Robert C.",
+     "call": "400.42 T772"
+    },
+    {
+     "title": "Growing up with two languages : a practical guide",
+     "author": "Cunningham-Andersson, Una",
+     "call": "400.42 C973g"
+    },
+    {
+     "title": "Multilingual America : transnationalism, ethnicity, and the languages of American literature",
+     "author": "Sollors, Werner",
+     "call": "400.42 M961"
+    },
+    {
+     "title": "Bilingualism / 2nd ed",
+     "author": "Romaine, Suzanne",
+     "call": "400.42 R757b 1995"
+    },
+    {
+     "title": "이중언어와 해외 한국어교육",
+     "author": "이중언어학회",
+     "call": "400.42 이77 v.12"
+    },
+    {
+     "title": "Attitudes and language",
+     "author": "Baker, Colin",
+     "call": "400.42 B167a"
+    },
+    {
+     "title": "Language processing in bilingual children",
+     "author": "Bialystok, Ellen",
+     "call": "400.42 L2872"
+    },
+    {
+     "title": "2개언어상용과 그 이론",
+     "author": "Hamers, Josiane F",
+     "call": "400.42 H214b K"
+    },
+    {
+     "title": "소련에서의 한국어학과 한국어 교육",
+     "author": "이중언어학회",
+     "call": "400.42 이77 v.8"
+    },
+    {
+     "title": "중국에서의 한국어 교육 (II)",
+     "author": "이중언어학회",
+     "call": "400.42 이77 v.7"
+    },
+    {
+     "title": "Language contact and bilingualism",
+     "author": "Appel, Rene>",
+     "call": "400.42 A646 l"
+    },
+    {
+     "title": "在外韓國人 및 外國人을 위한 韓國語檢査 開發硏究",
+     "author": "서울대학교. 재외국민교육원. 한국어교육연구회",
+     "call": "400.42 서67ㅈ"
+    },
+    {
+     "title": "해외자녀교육의 현황과 과제",
+     "author": "",
+     "call": "400.42 이77 v.1"
+    },
+    {
+     "title": "해외자녀의 이중언어 교육문제",
+     "author": "",
+     "call": "400.42 이77 v.2"
+    },
+    {
+     "title": "해외에서의 한국어교육",
+     "author": "",
+     "call": "400.42 이77 v.3"
+    },
+    {
+     "title": "일본에서의 한국어 교육",
+     "author": "",
+     "call": "400.42 이77 v.4"
+    },
+    {
+     "title": "미국에서의 한국어 교육",
+     "author": "",
+     "call": "400.42 이77 v.5"
+    },
+    {
+     "title": "중국에서의 한국어 교육",
+     "author": "",
+     "call": "400.42 이77 v.6"
+    },
+    {
+     "title": "Language development, grammar, and semantics",
+     "author": "Zwicky, Arnold M.",
+     "call": "400.42 B595 v.7"
+    },
+    {
+     "title": "Language and linguistics",
+     "author": "Falk, Julia S.",
+     "call": "400.42 L287 v.10"
+    }
+   ],
+   "sources": [
+    "키워드검색"
+   ],
+   "gold_match": true
+  },
+  {
+   "h": "306.446",
+   "call": "306.446",
+   "shelf_fit": 0.65,
+   "shelf_label": "다중언어의 사회언어학과 이중언어 연구",
+   "fit_reasoning": "서가 표본은 다중·이중언어를 중심으로 언어 접촉, 사회적 불평등·정책, 교육과 정체성 등을 다루는 사회언어학 연구서와 학술 핸드북이 반복된다. 신규 도서는 이중언어자가 언어를 습득하고 사용하는 조건 및 뇌의 작동을 설명한다는 점에서 이중언어 연구의 축과 맞닿는다. 다만 개인 학습자의 말하기 어려움을 이해시키는 교양적 설명서 성격이 강해, 사회적 다중언어 현상과 전문 연구를 주로 다루는 표본의 자료 성격과는 차이가 있다. 주제·관점 0.63, 자료 성격·용도 0.35로 산술평균은 0.49이다.",
+   "cited_books": [
+    "The mysteries of bilingualism : unresolved issues",
+    "Multilingualism : a sociolinguistic and acquisitional approach",
+    "The adaptive bilingual mind : insights from endangered languages",
+    "언어 다양성과 불평등 : 정의로운 사회를 위한 사회언어학"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "The mysteries of bilingualism : unresolved issues",
+     "desc": "이중언어 연구자 프랑수아 그로장이 이중언어 현상을 둘러싼 11가지 미해결 질문(누가 이중언어자인가, 언어처리 방식, 성격 변화 등)을 성찰과 문헌·사례연구로 풀어낸 책."
+    },
+    {
+     "title": "Multilingualism : a sociolinguistic and acquisitional approach",
+     "desc": "다중언어를 두 언어의 완전한 습득이 아니라 상황별 언어자원의 연속체로 보는 사회언어학·습득론적 교재. 정체성·교육 정책부터 이주·뉴미디어 맥락의 다중언어까지 다룬다."
+    },
+    {
+     "title": "The adaptive bilingual mind : insights from endangered languages",
+     "desc": "이중언어 연구와 소멸위기 언어 연구를 결합한 책(Adamou). 이중언어자가 언어별 개념화를 유지하는지, 높은 인지적 비용에 직면하는지를 통계·언어학적·민족지학적 자료로 살핀다."
+    },
+    {
+     "title": "언어 다양성과 불평등 : 정의로운 사회를 위한 사회언어학",
+     "desc": "실제 세계에서 언어 다양성은 언제나 언어의 계층화와 언어적 종속을 수반한다. 이 책은 세계가 하나로 연결되고 한 지역에서 다른 지역으로의 이주가 일상화된 시대에 자유 민주주의 국가들에서 발생하는 언어 불평등을 생생한 사례를 바탕으로 적나라하게 분석한다…"
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "Multifaceted multilingualism",
+     "author": "Grohmann, Kleanthes K.",
+     "call": "306.446 M9612"
+    },
+    {
+     "title": "언어 다양성과 불평등 : 정의로운 사회를 위한 사회언어학",
+     "author": "Piller, Ingrid",
+     "call": "306.446 P641 l K"
+    },
+    {
+     "title": "The power of voice in transforming multilingual societies",
+     "author": "Gspandl, Julia",
+     "call": "306.446 P887"
+    },
+    {
+     "title": "Bilinguisme, plurilinguisme et francophonie : mythes et réalités",
+     "author": "Cheryl Toman",
+     "call": "306.446 B5952"
+    },
+    {
+     "title": "Multilingualism : a sociolinguistic and acquisitional approach",
+     "author": "Buschfeld, Sarah",
+     "call": "306.446 B977mu"
+    },
+    {
+     "title": "메트로링구얼리즘 : 도시의 언어",
+     "author": "Pennycook, Alastair",
+     "call": "306.446 P416m K"
+    },
+    {
+     "title": "The mysteries of bilingualism : unresolved issues",
+     "author": "Grosjean, François",
+     "call": "306.446 G877m"
+    },
+    {
+     "title": "An advanced guide to multilinguism",
+     "author": "Aronin, Larissa",
+     "call": "306.446 A769a"
+    },
+    {
+     "title": "Language, nations and multilingualism : questioning the Herderian ideal",
+     "author": "Ying-Ying, Tan",
+     "call": "306.446 L2871"
+    },
+    {
+     "title": "The Cambridge handbook of heritage languages and linguistics",
+     "author": "Montrul, Silvina",
+     "call": "306.446 C178"
+    },
+    {
+     "title": "The adaptive bilingual mind : insights from endangered languages",
+     "author": "Adamou, Evangelia",
+     "call": "306.446 A199a"
+    },
+    {
+     "title": "Multilingual memories : monuments, museums and the linguistic landscape",
+     "author": "Blackwood, Robert J.",
+     "call": "306.446 M9611"
+    },
+    {
+     "title": "Four words for friend : why using more than one language matters now more than ever",
+     "author": "Kohn, Marek",
+     "call": "306.446 K79f"
+    },
+    {
+     "title": "Language and intercultural communication in the workplace : critical approaches to theory and practice",
+     "author": "Ladegaard, Hans J.",
+     "call": "306.446 L287"
+    },
+    {
+     "title": "Linguistic diversity and social justice an introduction to applied sociolinguistics",
+     "author": "Piller, Ingrid",
+     "call": "306.446 P641 l"
+    },
+    {
+     "title": "Language and superdiversity Indonesians knowledging at home and abroad",
+     "author": "Goebel, Zane",
+     "call": "306.446 G593 l"
+    },
+    {
+     "title": "Reflexivity in language and intercultural education: rethinking multilingualism and interculturality",
+     "author": "Clark, Julie Byrd",
+     "call": "306.446 R332"
+    },
+    {
+     "title": "Translingual practice global Englishes and cosmopolitan relations",
+     "author": "Canagarajah, A. Suresh",
+     "call": "306.446 C212t"
+    },
+    {
+     "title": "Linguistic superdiversity in urban areas : research approaches",
+     "author": "Duarte, Joana",
+     "call": "306.446 L755"
+    },
+    {
+     "title": "Ethnography, superdiversity and linguistic landscapes : chronicles of complexity",
+     "author": "Blommaert, Jan",
+     "call": "306.446 B653e"
+    },
+    {
+     "title": "고구마꽃을 피우는 아이들 : 다문화시대 다중언어교실에서 만나는 세상",
+     "author": "장은영",
+     "call": "306.446 고17"
+    },
+    {
+     "title": "Mehrsprachigkeit",
+     "author": "Busch, Brigitta",
+     "call": "306.446 B977m"
+    },
+    {
+     "title": "Multilingual individuals and multilingual societies",
+     "author": "Braunmüller, Kurt",
+     "call": "306.446 M961"
+    },
+    {
+     "title": "Resistance to multiculturalism : issues and interventions",
+     "author": "Mio, Jeffery Scott",
+     "call": "306.446 M669r"
+    },
+    {
+     "title": "Language attrition",
+     "author": "Schmid, Monika S.",
+     "call": "306.446 S348 l"
+    },
+    {
+     "title": "Handbook of multilingualism and multilingual communication",
+     "author": "Auer, Peter",
+     "call": "306.446 H236"
+    },
+    {
+     "title": "Multilinguisme et multiculturalite> dans l'Europe des Lumie<res : actes du Se>minaire International des Jeunes Dix-Huitie>mistes 2004",
+     "author": "Se>minaire international des jeunes dix-huitie>mistes",
+     "call": "306.446 S471m"
+    },
+    {
+     "title": "다문화사회에서 생각하는 모어교육: 이주가정과 국제결혼가정을 중심으로",
+     "author": "박정은",
+     "call": "306.446 박73ㄷ"
+    },
+    {
+     "title": "(캐나다에 사는) 소라엄마의 언어교육 이야기: 다문화 가정에서 한국어를 꽃피운다",
+     "author": "박정은",
+     "call": "306.446 박73ㅅ"
+    },
+    {
+     "title": "Gelebte mehrsprachigkeit : Akten des Wiener Kolloquiums zur individuellen und sozialen Mehrsprachigkeit, 5.-6.XI.2005",
+     "author": "Cichon, Peter",
+     "call": "306.446 G316"
+    },
+    {
+     "title": "Language contact and grammatical change",
+     "author": "Heine, Bernd",
+     "call": "306.446 H468 l"
+    },
+    {
+     "title": "Emotions and multilingualism",
+     "author": "Pavlenko, Aneta",
+     "call": "306.446 P338e"
+    },
+    {
+     "title": "Sprachenordnung und Minderheitenschutz im schweizerischen Bundesstaat : Relativitaet des Sprachenrechts und Sicherung des Sprachfriedens",
+     "author": "Richter, Dagmar",
+     "call": "306.446 R535s"
+    },
+    {
+     "title": "한국어가 사라진다면: 2023년, 영어 식민지 대한민국을 가다",
+     "author": "시정곤",
+     "call": "306.446 한17"
+    },
+    {
+     "title": "Not English only : redefining \"American\" in American studies",
+     "author": "Overland, Orm",
+     "call": "306.446 N899"
+    },
+    {
+     "title": "The bilingualism reader",
+     "author": "Wei, Li",
+     "call": "306.446 B595"
+    },
+    {
+     "title": "Multilingual literacies : reading and writing different worlds",
+     "author": "Martin-Jones, Marilyn",
+     "call": "306.446 M383m"
+    }
+   ],
+   "sources": [
+    "082",
+    "종합서지"
+   ],
+   "gold_match": true
+  },
+  {
+   "h": "401.93",
+   "call": "401.93",
+   "shelf_fit": 0.63,
+   "shelf_label": "언어습득 이론과 제2언어 발달 연구",
+   "fit_reasoning": "주제·관점 0.82, 자료 성격·용도 0.62. 서가 표본은 아동의 제1언어 습득과 성인 제2언어 습득을 심리·사회언어학·상호작용 관점에서 분석하는 연구서와 핸드북이 반복되는 전문적 성격의 자료군이다. 신규 도서는 외국어 학습이 어려운 원인을 환경·맥락·뇌 작동 및 언어습득 구조로 설명하므로 제2언어 습득의 핵심 문제의식과 맞닿는다. 다만 표본의 다수가 실증·이론 중심 전문 연구서인 데 비해, 이 책은 일반 독자에게 언어학습을 이해시키는 교양적 해설서일 가능성이 있어 이용 목적과 학술적 깊이에는 차이가 남는다.",
+   "cited_books": [
+    "Dynamics of L2 sociolinguistic development in adulthood",
+    "Usage-based perspectives on second language learning",
+    "Input, interaction, and corrective feedback in L2 learning",
+    "Language acquisition and development : a generative introduction"
+   ],
+   "cited_books_detail": [
+    {
+     "title": "Dynamics of L2 sociolinguistic development in adulthood",
+     "desc": "성인 제2언어 학습자의 사회언어학적 발달을 종단·횡단 연구로 살핀 책(Wirtz). 오스트리아 현지에서 방언적 변이를 인지·습득해가는 과정과 개인차를 다룬다."
+    },
+    {
+     "title": "Usage-based perspectives on second language learning",
+     "desc": "언어를 의사소통을 위한 체화된 상징적 도구로 보는 사용 기반(usage-based) 관점의 논문집(Cadierno·Eskildsen 편). 인지언어학과 대화분석을 결합해 언어 사용이 곧 학습의 핵심 조건임을 보여준다."
+    },
+    {
+     "title": "Input, interaction, and corrective feedback in L2 learning",
+     "desc": "상호작용이 제2언어 습득을 어떻게 촉진하는지 다룬 개론서(Mackey). 상호작용 접근의 핵심 개념과 실증 연구를 정리하며 인풋·협상·피드백·교정적 재구성(recast)을 설명한다."
+    },
+    {
+     "title": "Language acquisition and development : a generative introduction",
+     "desc": "생성문법(보편문법) 관점에서 아동의 언어습득·발달을 다루는 입문서(Becker·Deen). 음운·어휘의미·형태통사 습득부터 이중언어습득, 비전형적 습득 사례까지 포괄적으로 다룬다."
+    }
+   ],
+   "shelf_sample": [
+    {
+     "title": "Creating an inclusive classroom for DLD : a teacher's toolkit to support children with developmental language Disorder",
+     "author": "Little, Katie",
+     "call": "401.93 L778c"
+    },
+    {
+     "title": "Dynamics of L2 sociolinguistic development in adulthood",
+     "author": "Wirtz, Mason A.",
+     "call": "401.93 W799d"
+    },
+    {
+     "title": "The Routledge handbook of second language acquisition and sociolinguistics",
+     "author": "Geeslin, Kimberly L.",
+     "call": "401.93 R869"
+    },
+    {
+     "title": "Language acquisition and development : a generative introduction",
+     "author": "Becker, Misha Karen",
+     "call": "401.93 B395 l"
+    },
+    {
+     "title": "Usage-based perspectives on second language learning",
+     "author": "Cadierno, Teresa",
+     "call": "401.93 U84"
+    },
+    {
+     "title": "Input, interaction, and corrective feedback in L2 learning",
+     "author": "Mackey, Alison",
+     "call": "401.93 M157i"
+    },
+    {
+     "title": "Discourse and the non-native English speaker",
+     "author": "Cribb, Michael",
+     "call": "401.93 C928d"
+    },
+    {
+     "title": "How children learn to learn language",
+     "author": "MacCune, Lorraine",
+     "call": "401.93 M133h"
+    },
+    {
+     "title": "아이들은 어떻게 말을 배우나",
+     "author": "O'Grady, William D",
+     "call": "401.93 O35h K"
+    },
+    {
+     "title": "First language acquisition : the essential readings",
+     "author": "Lust, Barbara",
+     "call": "401.93 F527"
+    },
+    {
+     "title": "First language acquisition",
+     "author": "Clark, Eve V.",
+     "call": "401.93 C592f"
+    },
+    {
+     "title": "Children's discourse : person, space and time across languages",
+     "author": "Hickmann, Maya",
+     "call": "401.93 H628c"
+    },
+    {
+     "title": "Language acquisition and learnability",
+     "author": "Bertolo, Stefano",
+     "call": "401.93 L287"
+    },
+    {
+     "title": "The acquisition of lexical and grammatical aspect",
+     "author": "리평",
+     "call": "401.93 A186"
+    }
+   ],
+   "sources": [
+    "종합서지"
+   ],
+   "gold_match": false
+  }
+ ],
+ "ddc_082": "306.446",
+ "went_keyword": true,
+ "keyword_query": [
+  "이중언어",
+  "Bilingualism",
+  "언어 습득",
+  "Language acquisition",
+  "Psycholinguistics"
+ ],
+ "stage_messages": [
+  "082(306.446) 있음 → 본교에서 의미 확인 (본교에 해당 번호대 있음).",
+  "082(306.446) 서가 적합도 0.49 — 게이트 없이 후보로만 씁니다. 판정은 전체 후보를 모은 뒤 합니다.",
+  "종합서지 매칭: 「어느 완벽한 이중언어자 : 한 권으로 보는 2개 국어의」 · DDC 8개 대학(서강 1개 제외) · KDC 2개(미집계).",
+  "DDC voting(순서 힌트): 407(1), 401.93(1) ※082(306.446)도 6개 대학이 매김 — 업체 번호 승계 가능성이 있어 독립 득표로는 안 세고 출처 라벨만 남깁니다.",
+  "키워드 검색(이중언어, Bilingualism, 언어 습득, Language acquisition, Psycholinguistics) · 2개 이상 매칭 · 38개 번호대 중 3개 채택.",
+  "키워드 후보: 400.19(30권), 400.193(18권), 400.42(6권)"
+ ],
+ "outliers": []
+}
