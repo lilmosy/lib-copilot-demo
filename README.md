@@ -15,7 +15,7 @@ AI가 후보와 근거를 제시하는 흐름을 보여줍니다.
 |---|---|
 | `/api/biblio` → SQLite 서버 조회 | `data/books.db.gz`(장서 DB 부분집합 14만 건)를 브라우저 안 SQLite([sql.js](https://sql.js.org))로 열어 **같은 SQL** 실행 |
 | `/api/classify` → lib_copilot 파이프라인 실시간 LLM 호출 | 파이프라인을 한 번 실행해 얼려둔 `data/classify/<case>.json` (수정 없음) |
-| 종합목록 그리드 비어 있음 | `data/catalog_sample.json` — 골든셋 중 편목 대기열이 아닌 7권을 KERIS 실제 대학별 소장 기록과 함께 채움 (하드코딩 검색 3권은 원본 그대로) |
+| 종합목록 그리드 비어 있음 | `data/catalog_sample.json` — 원본에서 검색되던 3권 + 골든셋 중 편목 대기열이 아닌 7권(KERIS 실제 대학별 소장 기록)으로 첫 화면을 채우고, 7권도 검색되게 함. "결과 없음" 시나리오는 그대로 |
 
 방문자가 어떤 버튼을 눌러도 외부 API는 호출되지 않습니다.
 

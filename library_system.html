@@ -818,11 +818,15 @@
 
 <div class="hint" id="hint">
   <span class="close" onclick="document.getElementById('hint').style.display='none'">닫기 ✕</span>
-  <b>사용법</b> · 좌측 <b>종합목록</b> 클릭 → KERIS 검색창. 기본값 <b>‘부처의 생각하지 않는 연습’</b> [검색] → <b>결과 없음</b> 창.
-  <br>책이 나오는 3가지: <b>‘생각이 많아 부처님께 물었더니’</b> · <b>‘그만두지 않는 독서’</b>(2건) · <b>‘리셋 유어 마인드’</b> → [검색] 후 [선택자료 가져오기].
-  <br>상단 <b>서지</b> 탭 → 청구기호 <b>294.344</b> [Search] → 결과 목록.
-  <br>상단 <b>편목</b> 탭 → 대기열 행 더블클릭 → MARC 상세정보 → <b>소장처설정</b> → 852 청구기호 입력 → [저장].
-  <br><span style="color:#888">정적 배포판 · 종합목록 첫 화면 7권은 KERIS 실제 대학별 소장 기록 · 서지 검색은 장서 일부(14만 건) · AI 추천은 공모전 파이프라인 실행 결과를 저장해 보여줌</span>
+  <b>사용법</b>
+  <br>· <b>타대학 소장·청구기호 보기</b> ─ 좌측 [종합목록] · 첫 화면의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.
+  <br>&nbsp;&nbsp;검색해 보려면 [서지검색] → ‘생각이 많아 부처님께 물었더니’ [검색] → [선택자료 가져오기]
+  <br>· <b>본교 서가 보기</b> ─ 상단 [서지] 탭 → 청구기호 <b>294.344</b> [Search]
+  <br>· <b>★ 청구기호 정하기 (핵심)</b> ─ 상단 [편목] 탭 → 대기열 행 더블클릭 → MARC 상세정보
+  → <b>[AI-search]</b> → 후보 순위·근거 확인([상세정보]로 인용 도서까지) → 후보 클릭하면 852에 입력 → 소장처설정 → [저장]
+  <br>&nbsp;&nbsp;기존에는 사서가 업체 082 번호를 본교 서가에서 확인 → 종합목록에서 타대학 분포 확인 → 본교 서가와 다시 대조 → 책소개 확인을 손으로 반복했습니다.
+  AI-search는 이 과정을 한 번에 돌려 후보와 근거를 함께 보여줍니다.
+  <br><span style="color:#888">정적 배포판 · 종합목록에 7권 추가(KERIS 실제 대학별 소장 기록) · 서지 검색은 장서 일부(14만 건) · AI 추천은 공모전 파이프라인 실행 결과를 저장해 보여줌</span>
 </div>
 
 
@@ -907,12 +911,18 @@ async function fillCatalogSample(){
       const d8 = (b.marc['008']||[''])[0];
       const created = d8.length>=6 ? _fmtDate('20'+d8.slice(0,6)) : _fmtDate(d5);
       return { ctrl, title:b.title, author:b.author||'', pub:b.publisher||'', year:b.year||'', isbn:b.isbn||'',
-               type:'단행본', inst:'1', d1:created, d2:_fmtDate(d5), d3:_fmtDate(d5),
+               type:'단행본', inst:String(b.holdings.length), d1:created, d2:_fmtDate(d5), d3:_fmtDate(d5),
                holdings:b.holdings, marc:_detailToMarc(b.marc) };
     });
     if(!recs.length) return;
-    currentResults = recs; currentResults._query = '신착도서';
-    populateCatalog(recs[0], '신착도서', recs.length);
+    // KERIS 검색창에서도 찾히도록 BOOKS에 추가 (원래 3권의 검색 로직은 그대로)
+    recs.forEach(r=>{
+      const main = r.title.split(' :')[0].split(' = ')[0];
+      BOOKS.push({ query: main, matchKeys: [normalize(main), normalize(r.title)], results: [r] });
+    });
+    const all = BOOKS.slice(0, BOOKS.length - recs.length).flatMap(bk => bk.results).concat(recs);
+    currentResults = all; currentResults._query = '신착도서';
+    populateCatalog(all[0], '신착도서', all.length);
     document.getElementById('cat-query').innerHTML = "검색종류 : [키워드] &nbsp; 검색항목 : [등록일] &nbsp; 검색어 : [최근 반입분]";
   }catch(e){ console.warn('catalog sample load failed', e); }
 }
