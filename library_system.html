@@ -973,9 +973,9 @@
     <span class="ctrls"><span id="hint-min" onclick="toggleHintMin()">접기</span><span onclick="closeHint()">닫기</span></span></div>
 
   <div class="h-sec">
-    <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">시작 화면 · 좌측 <kbd>종합목록</kbd></span></div>
-    <div class="h-step">목록의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다. 종합목록 메뉴를 누르면 KERIS 검색창이 뜹니다.</div>
-    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → 서명에 <span class="lbl">ex.</span> ‘생각이 많아 부처님께 물었더니’ 입력 → <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd> → 목록 맨 위에 추가</div>
+    <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
+    <div class="h-step"><kbd>서지검색</kbd> → 서명에 <span class="lbl">ex.</span> ‘생각이 많아 부처님께 물었더니’ → <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
+    <div class="h-step">목록의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
   </div>
 
   <div class="h-sec">
@@ -2252,6 +2252,7 @@ function reopenHint(){
 /* ------- init ------- */
 window.addEventListener('DOMContentLoaded',()=>{
   initHintGrip();
+  openKeris();               // 원본 데모와 같이 시작하면 KERIS 검색창이 뜬다
   fillCatalogSample();       // 정적 배포: 종합목록 그리드를 장서 DB 표본으로 미리 채움
   searchBiblio();            // pre-fill 서지 table so 서지 tab shows the 294.344 result
   renderQueue();             // pre-fill 편목 대기열

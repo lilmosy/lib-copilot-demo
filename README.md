@@ -5,7 +5,7 @@
 2026 서강대학교 생성형 AI 아이디어 공모전 우수상 (sogang renAIssance 팀).
 원본 저장소: https://github.com/HAICoLab/sogang_renAIssance
 
-**데모 보기:** https://lilmosy.github.io/LibCopilot/library_system.html
+**데모 보기:** https://lilmosy.github.io/lib-copilot-demo/library_system.html
 
 ## 무엇을 하는가
 
