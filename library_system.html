@@ -8,8 +8,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css">
+<script>
+// 화면 배율: 큰 모니터 120%, 노트북처럼 좁거나 낮은 화면은 100%까지 줄인다
+(function(){
+  const fit = ()=>{
+    const s = Math.max(1, Math.min(1.2, window.innerWidth / 1250, window.innerHeight / 690));
+    document.documentElement.style.setProperty('--ui-scale', s.toFixed(3));
+  };
+  fit(); window.addEventListener('resize', fit);
+})();
+</script>
 <style>
   :root{
+    --ui-scale:1.2; --app-h:calc(100vh / var(--ui-scale));
     --rail-top:#5a7188; --rail-bot:#3f5568;
     --topbar-top:#7a9bbd; --topbar-bot:#4e647b;
     --btn-top:#6cb2e0; --btn-bot:#2f89c0;
@@ -35,8 +46,9 @@
      문제가 있어, 대신 어디서나 동일하게 동작하는 transform:scale로 구현한다. */
   .app{
     display:flex;background:var(--page-bg);
-    width:83.333vw;height:83.333vh; /* 확대 전 크기 = 100/1.2 → scale(1.2) 후 정확히 100vw/100vh */
-    transform:scale(1.2); transform-origin:top left;
+    /* 배율은 창 크기에 맞춰 1.0~1.2 사이에서 자동으로 정한다(--ui-scale, 아래 스크립트). 확대 전 크기 = 100/배율 */
+    width:calc(100vw / var(--ui-scale)); height:var(--app-h);
+    transform:scale(var(--ui-scale)); transform-origin:top left;
     position:fixed; top:0; left:0;
   }
 
@@ -143,10 +155,20 @@
   table.grid tbody tr{cursor:default;}
   table.grid tbody tr:hover td{background:#dcecf9;}
   .num{text-align:center;color:#666;}
+  .hs-wrap{position:relative;}
+  .hs-fade{position:absolute;top:1px;right:5px;bottom:1px;width:120px;pointer-events:none;display:none;
+    align-items:center;justify-content:flex-end;background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.96) 75%);}
+  .hs-fade span{pointer-events:auto;cursor:pointer;background:#2f6ea5;color:#fff;font-size:11px;padding:3px 9px;border-radius:11px;
+    margin-right:10px;box-shadow:0 2px 6px rgba(0,0,0,.2);white-space:nowrap;animation:hsnudge 1.8s ease-in-out infinite;}
+  @keyframes hsnudge{0%,100%{transform:translateX(0);}50%{transform:translateX(4px);}}
+  table.grid td.cut > div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .empty-rows tr td{height:20px;border:1px solid #eef2f6;background:#fff !important;}
 
   /* comprehensive catalog layout */
-  #view-catalog .topgrid{height:330px;}
+  #view-catalog{display:flex;flex-direction:column;height:100%;}
+  #view-catalog .topgrid{flex:0 1 330px;height:auto;min-height:150px;}
+  #view-catalog .split{flex:1 1 auto;min-height:220px;}
+  #view-catalog .split .left > .gridwrap,#view-catalog .split .right > .marc{height:100% !important;}
   .split{display:flex;gap:4px;margin:4px;}
   .split .left{flex:0 0 400px;}
   .split .right{flex:1;min-width:0;}
@@ -701,7 +723,7 @@
           <div class="infobar">검색건수 : <b id="bi-count">&nbsp;0</b>
             <span class="right" id="bi-query"></span></div>
 
-          <div class="gridwrap" style="height:calc(83.333vh - 183px);">
+          <div class="hs-wrap"><div class="gridwrap" id="bi-wrap" style="height:calc(var(--app-h) - 183px);">
             <table class="grid" id="bi-grid">
               <thead><tr>
                 <th style="width:32px">No.</th><th style="width:70px">등록번호</th>
@@ -719,6 +741,7 @@
               <tbody id="bi-body"></tbody>
             </table>
           </div>
+          <div class="hs-fade" id="bi-hs"><span onclick="nudgeBiblioRight()">옆으로 더 있음 →</span></div></div>
         </div>
 
         <!-- ---------- 편목 view ---------- -->
@@ -731,7 +754,7 @@
           </div>
           <div class="infobar">검색건수 : <b id="pmk-count">&nbsp;0</b>
             <span class="right">신착도서 등록번호순 &middot; 행을 더블클릭하면 MARC 상세정보가 열립니다.</span></div>
-          <div class="gridwrap" style="height:calc(83.333vh - 158px);">
+          <div class="gridwrap" style="height:calc(var(--app-h) - 158px);">
             <table class="grid" id="pmk-grid">
               <thead><tr>
                 <th style="width:34px">No.</th><th style="width:70px">상태</th>
@@ -754,7 +777,7 @@
           </div>
           <div class="infobar">검색건수 : <b id="arc-count">&nbsp;0</b>
             <span class="right">AI 1순위(최고 신뢰도)가 아닌 후보를 사서가 선택한 경우만 기록됩니다.</span></div>
-          <div class="gridwrap" style="height:calc(83.333vh - 158px);">
+          <div class="gridwrap" style="height:calc(var(--app-h) - 158px);">
             <table class="grid" id="arc-grid">
               <thead><tr>
                 <th style="width:34px">No.</th>
@@ -1395,7 +1418,7 @@ function switchTab(which){
   document.getElementById('tab-biblio').classList.toggle('active',which==='biblio');
   document.getElementById('tab-pyeonmok').classList.toggle('active',which==='pyeonmok');
   document.getElementById('tab-archive').classList.toggle('active',which==='archive');
-  document.getElementById('view-catalog').style.display = which==='catalog'?'block':'none';
+  document.getElementById('view-catalog').style.display = which==='catalog'?'flex':'none';
   document.getElementById('view-biblio').style.display = which==='biblio'?'block':'none';
   document.getElementById('view-pyeonmok').style.display = which==='pyeonmok'?'block':'none';
   document.getElementById('view-archive').style.display = which==='archive'?'block':'none';
@@ -1417,7 +1440,7 @@ function openKeris(){
 function switchToCatalogSilently(){
   document.getElementById('tab-catalog').classList.add('active');
   document.getElementById('tab-biblio').classList.remove('active');
-  document.getElementById('view-catalog').style.display='block';
+  document.getElementById('view-catalog').style.display='flex';
   document.getElementById('view-biblio').style.display='none';
 }
 function closeKeris(){hide('ov-keris');}
@@ -1552,7 +1575,7 @@ async function searchBiblio(){
     body.innerHTML = rows.map((r,i)=>
       `<tr class="${i===0?'sel':''}">
          <td class="num">${i+1}</td><td class="num">${r.reg}</td>
-         <td>${r.title}</td><td>${r.author}</td><td>${r.publisher}</td>
+         <td class="cut" title="${escapeHtml(r.title)}"><div style="max-width:300px">${r.title}</div></td><td class="cut" title="${escapeHtml(r.author)}"><div style="max-width:150px">${r.author}</div></td><td class="cut" title="${escapeHtml(r.publisher)}"><div style="max-width:130px">${r.publisher}</div></td>
          <td class="num">${r.year}</td><td>${r.altcall}</td><td>${r.callno}</td>
          <td>cm</td><td></td><td></td><td></td><td></td>
          <td>${r.loc}</td><td>${r.room}</td><td></td>
@@ -2215,6 +2238,25 @@ function flashQueueRow(i){
 function confirmSaveDone(){
   hide('ov-savedone');
 }
+
+/* ------- 서지 표: 오른쪽에 칸이 더 있다는 표시 ------- */
+function updateBiblioHint(){
+  const w = document.getElementById('bi-wrap'), h = document.getElementById('bi-hs');
+  if(!w || !h) return;
+  const more = !w.dataset.scrolled && w.clientWidth > 0 && w.scrollWidth > w.clientWidth + 4
+    && document.getElementById('bi-body').children.length > 0;
+  h.style.display = more ? 'flex' : 'none';
+}
+function nudgeBiblioRight(){
+  const w = document.getElementById('bi-wrap');
+  w.scrollBy({left: Math.round(w.clientWidth * 0.6), behavior: 'smooth'});
+}
+(function(){
+  const w = document.getElementById('bi-wrap');
+  w.addEventListener('scroll', ()=>{ if(w.scrollLeft > 20){ w.dataset.scrolled = '1'; updateBiblioHint(); } });
+  new MutationObserver(updateBiblioHint).observe(document.getElementById('bi-body'), {childList:true});
+  new ResizeObserver(updateBiblioHint).observe(w);
+})();
 
 /* ------- 사용법 패널 ------- */
 // 오른쪽 위 손잡이를 끌어 크기 조절. 패널은 왼쪽 아래 기준이라 위·오른쪽으로 늘어난다.
