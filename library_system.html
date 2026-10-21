@@ -157,6 +157,12 @@
   .num{text-align:center;color:#666;}
   table.grid td.cut > div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   table.grid td.cut{cursor:pointer;}
+  #arc-grid{table-layout:fixed;}
+  #arc-grid td{white-space:normal;word-break:keep-all;vertical-align:top;padding-top:4px;padding-bottom:4px;}
+  #arc-grid td.arc-memo{cursor:text;}
+  #arc-grid td.arc-memo.empty{color:#9aa8b8;font-style:italic;}
+  #arc-grid td.arc-memo.empty:hover{color:#2f6ea5;}
+  #arc-grid .arc-memo-in{width:100%;font-size:11px;padding:2px 4px;border:1px solid #2f89c0;box-sizing:border-box;}
   table.grid tr.open td.cut > div{white-space:normal;overflow:visible;word-break:keep-all;}
   table.grid tr.open td{vertical-align:top;}
   .empty-rows tr td{height:20px;border:1px solid #eef2f6;background:#fff !important;}
@@ -276,7 +282,7 @@
   .aix-card.top{background:#f3f7fc;}
   .aix-card.top::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#1d3a63;}
   .aix-card.picked{background:#fbf5e6;}
-  .aix-card.picked::after{content:"852에 입력됨";position:absolute;right:14px;bottom:10px;font-size:11px;color:#8a6414;font-weight:600;}
+  .aix-card.picked::after{content:"852에 입력됨";position:absolute;right:160px;top:15px;font-size:11px;color:#8a6414;font-weight:600;}
   #new852-input.flash{animation:inpflash 1.2s ease-out;}
   @keyframes inpflash{0%{background:#fbe9bf;}100%{background:#fff;}}
   .aix-rank{font-size:12px;color:#8a97a8;font-variant-numeric:tabular-nums;padding-top:3px;font-weight:600;}
@@ -501,7 +507,7 @@
   /* 아카이브 화면도 편목과 동일하게 발표용 글자 확대 */
   #view-archive .infobar{font-size:14px;}
   #arc-grid{font-size:15px;}
-  #arc-grid td:nth-child(5){white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  #arc-grid td:nth-child(5){white-space:normal;}
   #arc-grid th{padding:6px 8px;}
   #arc-grid td{padding:6px 8px;}
 
@@ -772,7 +778,7 @@
             <button class="btn gray" onclick="renderArchive()">새로고침</button>
           </div>
           <div class="infobar">검색건수 : <b id="arc-count">&nbsp;0</b>
-            <span class="right">AI 1순위(최고 신뢰도)가 아닌 후보를 사서가 선택한 경우만 기록됩니다.</span></div>
+            <span class="right">AI 1순위가 아닌 후보를 사서가 고른 경우 기록됩니다 · 기각 사유는 축적되어 향후 AI 판단 기준 보정에 활용됩니다.</span></div>
           <div class="gridwrap" style="height:calc(var(--app-h) - 158px);">
             <table class="grid" id="arc-grid">
               <thead><tr>
@@ -781,7 +787,7 @@
                 <th style="width:95px">AI결정<br>청구기호</th>
                 <th style="width:95px">사서결정<br>청구기호</th>
                 <th style="width:420px">메모</th>
-                <th style="width:130px">시간</th>
+                <th style="width:165px">시간</th>
               </tr></thead>
               <tbody id="arc-body"></tbody>
             </table>
@@ -1811,8 +1817,8 @@ function candMemoLine(call){
   const q = CATALOG_QUEUE[pmkIdx];
   const memo = (q && q._candMemo && q._candMemo[call]) || '';
   return `<div class="ai852-memo-wrap" onclick="event.stopPropagation()">
-    <span class="ai852-memo-btn" onclick="toggleCandMemo(this)">메모${memo ? ' (작성됨)' : ''}</span>
-    <textarea class="ai852-memo-box${memo ? ' show has-memo' : ''}" placeholder="암묵지 메모 (Enter로 저장, Shift+Enter는 줄바꿈)"
+    <span class="ai852-memo-btn" onclick="toggleCandMemo(this)">기각 사유 메모${memo ? ' (작성됨)' : ''}</span>
+    <textarea class="ai852-memo-box${memo ? ' show has-memo' : ''}" placeholder="AI 1순위 대신 이 번호를 고른 이유 — 기각사례에 기록되어 AI 판단 개선 데이터로 쌓입니다 (Enter 저장)"
       oninput="saveCandMemo(this,'${call}')"
       onblur="hideCandMemoIfEmpty(this)"
       onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();saveCandMemo(this,'${call}');renderAIResult(lastAIData);}">${escapeHtml(memo)}</textarea>
@@ -1939,7 +1945,7 @@ function aixCard(c, i, d, f, opts){
   } else if((c.cited_books||[]).length){
     cited = `<div class="aix-cited"><span class="k">근거로 든 서가 도서</span>${c.cited_books.join(' · ')}</div>`;
   }
-  const memo = opts.detail ? '' : candMemoLine(call);
+  const memo = (opts.detail || isTop) ? '' : candMemoLine(call);   // 1순위를 고르면 기각사례가 생기지 않으므로 메모 없음
   const click = opts.detail ? `onclick="pickFromDetail('${call}')"` : `onclick="pickAIH('${call}')"`;
   const picked = (CATALOG_QUEUE[pmkIdx] && CATALOG_QUEUE[pmkIdx]._pendH === call) ? ' picked' : '';
   return `<div class="aix-card${isTop?' top':''}${picked}" data-call="${call}" ${click}>
@@ -1981,13 +1987,24 @@ function pickFromDetail(h){
 function pickAIH(h){
   document.getElementById('new852-input').value = h;
   document.getElementById('new852-input').focus();
-  document.querySelectorAll('.aix-card').forEach(el=>el.classList.toggle('picked', el.dataset.call === h));
   const q = CATALOG_QUEUE[pmkIdx];
   if(!q) return;
   q._pendH = h;
   // 저자기호(▼i)·권차(▼m)는 여기서 바로 채우지 않는다 — 저장(saveRecord) 후 5초 지연으로 채워짐(데모용).
   document.getElementById('pmk-me-body').innerHTML = marcFieldsHTML(buildDisplayMarc(q));
   logArchiveIfOverride(q, h);
+  document.querySelectorAll('.aix-card').forEach(el=>el.classList.toggle('picked', el.dataset.call === h));
+  // 1순위가 아닌 후보를 고르면(=기각사례 기록) 그 카드의 기각 사유 메모 칸을 열고 커서를 둔다
+  const card = document.querySelector(`#ai852-box .aix-card[data-call="${h}"]`);
+  const ta = card && card.querySelector('.ai852-memo-box');
+  if(ta){
+    const more = card.closest('.ai852-more'); if(more && more.style.display==='none'){ more.style.display=''; }
+    ta.classList.add('show');
+    const box = document.getElementById('ai852-box');
+    const top = card.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 8;
+    box.scrollTop = top;
+    setTimeout(()=>ta.focus({preventScroll:true}), 300);
+  }
 }
 // AI 1순위(최고 신뢰도)가 아닌 후보를 사서가 고르면 아카이브에 남긴다.
 // 다시 1순위를 고르면(마음을 바꾸면) 그 기록은 지운다 — 책 한 권당 최신 상태 1건만 유지.
@@ -2012,10 +2029,32 @@ function renderArchive(){
     const title = e.title || (q ? q.title : '');
     const memo = e.memo != null ? e.memo : ((q && q._candMemo && q._candMemo[e.librarianCall]) || '');
     const t = e.time.toLocaleString('ko-KR',{hour12:false});
+    const memoCell = memo.trim()
+      ? `<td class="arc-memo" onclick="editArchiveMemo(this, ${ARCHIVE_LOG.indexOf(e)})">${escapeHtml(memo)}</td>`
+      : `<td class="arc-memo empty" onclick="editArchiveMemo(this, ${ARCHIVE_LOG.indexOf(e)})">클릭해서 기각 사유 입력</td>`;
     return `<tr><td class="num">${i+1}</td><td>${title}</td>
        <td class="num">${e.aiCall}</td><td class="num">${e.librarianCall}</td>
-       <td>${escapeHtml(memo)}</td><td class="num">${t}</td></tr>`;
+       ${memoCell}<td class="num">${t}</td></tr>`;
   }).join('') : '<tr><td colspan="6" style="text-align:center;color:#999;padding:40px;">아직 기록된 항목이 없습니다.</td></tr>';
+}
+
+// 기각사례 메모를 표에서 바로 고친다. 실제 로그 항목은 편목 화면의 후보 메모와 같은 값을 공유한다.
+function editArchiveMemo(td, idx){
+  if(td.querySelector('input')) return;
+  const e = ARCHIVE_LOG[idx]; if(!e) return;
+  const q = e.memo == null ? CATALOG_QUEUE.find(b=>b.reg===e.reg) : null;
+  const cur = e.memo != null ? e.memo : ((q && q._candMemo && q._candMemo[e.librarianCall]) || '');
+  td.classList.remove('empty');
+  td.innerHTML = `<input class="arc-memo-in" value="${escapeHtml(cur)}" placeholder="기각 사유 (Enter 저장, Esc 취소)">`;
+  const inp = td.querySelector('input'); inp.focus();
+  const save = ()=>{
+    const v = inp.value;
+    if(e.memo != null) e.memo = v;
+    else if(q){ q._candMemo = q._candMemo || {}; q._candMemo[e.librarianCall] = v; }
+    renderArchive();
+  };
+  inp.addEventListener('keydown', ev=>{ if(ev.key==='Enter') save(); if(ev.key==='Escape') renderArchive(); });
+  inp.addEventListener('blur', save);
 }
 
 // ---------- Monitor(청구기호 오류 아웃라이어 점검) ----------
