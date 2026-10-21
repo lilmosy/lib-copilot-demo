@@ -155,12 +155,6 @@
   table.grid tbody tr{cursor:default;}
   table.grid tbody tr:hover td{background:#dcecf9;}
   .num{text-align:center;color:#666;}
-  .hs-wrap{position:relative;}
-  .hs-fade{position:absolute;top:1px;right:5px;bottom:1px;width:120px;pointer-events:none;display:none;
-    align-items:center;justify-content:flex-end;background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.96) 75%);}
-  .hs-fade span{pointer-events:auto;cursor:pointer;background:#2f6ea5;color:#fff;font-size:11px;padding:3px 9px;border-radius:11px;
-    margin-right:10px;box-shadow:0 2px 6px rgba(0,0,0,.2);white-space:nowrap;animation:hsnudge 1.8s ease-in-out infinite;}
-  @keyframes hsnudge{0%,100%{transform:translateX(0);}50%{transform:translateX(4px);}}
   table.grid td.cut > div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .empty-rows tr td{height:20px;border:1px solid #eef2f6;background:#fff !important;}
 
@@ -723,7 +717,7 @@
           <div class="infobar">검색건수 : <b id="bi-count">&nbsp;0</b>
             <span class="right" id="bi-query"></span></div>
 
-          <div class="hs-wrap"><div class="gridwrap" id="bi-wrap" style="height:calc(var(--app-h) - 183px);">
+          <div class="gridwrap" id="bi-wrap" style="height:calc(var(--app-h) - 183px);">
             <table class="grid" id="bi-grid">
               <thead><tr>
                 <th style="width:32px">No.</th><th style="width:70px">등록번호</th>
@@ -741,7 +735,6 @@
               <tbody id="bi-body"></tbody>
             </table>
           </div>
-          <div class="hs-fade" id="bi-hs"><span onclick="nudgeBiblioRight()">옆으로 더 있음 →</span></div></div>
         </div>
 
         <!-- ---------- 편목 view ---------- -->
@@ -2238,25 +2231,6 @@ function flashQueueRow(i){
 function confirmSaveDone(){
   hide('ov-savedone');
 }
-
-/* ------- 서지 표: 오른쪽에 칸이 더 있다는 표시 ------- */
-function updateBiblioHint(){
-  const w = document.getElementById('bi-wrap'), h = document.getElementById('bi-hs');
-  if(!w || !h) return;
-  const more = !w.dataset.scrolled && w.clientWidth > 0 && w.scrollWidth > w.clientWidth + 4
-    && document.getElementById('bi-body').children.length > 0;
-  h.style.display = more ? 'flex' : 'none';
-}
-function nudgeBiblioRight(){
-  const w = document.getElementById('bi-wrap');
-  w.scrollBy({left: Math.round(w.clientWidth * 0.6), behavior: 'smooth'});
-}
-(function(){
-  const w = document.getElementById('bi-wrap');
-  w.addEventListener('scroll', ()=>{ if(w.scrollLeft > 20){ w.dataset.scrolled = '1'; updateBiblioHint(); } });
-  new MutationObserver(updateBiblioHint).observe(document.getElementById('bi-body'), {childList:true});
-  new ResizeObserver(updateBiblioHint).observe(w);
-})();
 
 /* ------- 사용법 패널 ------- */
 // 오른쪽 위 손잡이를 끌어 크기 조절. 패널은 왼쪽 아래 기준이라 위·오른쪽으로 늘어난다.
