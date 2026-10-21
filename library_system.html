@@ -226,10 +226,26 @@
   .k-count{padding:4px 12px;font-size:11px;color:#2d4a63;background:#e0eaf2;}
   .k-count b{color:#0a3d62;}
 
-  .hint{position:fixed;bottom:10px;left:56px;background:rgba(0,0,0,.72);color:#fff;
-    padding:7px 12px;border-radius:5px;font-size:11px;max-width:520px;line-height:1.5;z-index:60;}
-  .hint b{color:#7fd0ff;}
-  .hint .close{float:right;margin-left:10px;cursor:pointer;color:#ffd;}
+  .hint{position:fixed;bottom:10px;left:56px;background:rgba(20,24,32,.97);color:#e8ecf2;
+    padding:10px 14px 12px;border-radius:7px;font-size:11.5px;width:560px;max-width:calc(100vw - 72px);
+    line-height:1.55;z-index:60;box-shadow:0 4px 16px rgba(0,0,0,.25);}
+  .hint .close{float:right;margin-left:10px;cursor:pointer;color:#aab4c2;font-size:11px;}
+  .hint .close:hover{color:#fff;}
+  .hint .h-title{font-weight:bold;font-size:12.5px;color:#fff;margin-bottom:6px;}
+  .hint .h-sec{padding:5px 0 6px;border-top:1px solid rgba(255,255,255,.12);}
+  .hint .h-head{font-weight:bold;color:#7fd0ff;}
+  .hint .h-head .where{font-weight:normal;color:#aab4c2;margin-left:6px;}
+  .hint .h-step{padding-left:14px;color:#dfe5ec;}
+  .hint .h-step .lbl{color:#aab4c2;}
+  .hint kbd{font-family:inherit;font-size:10.5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+    border-radius:3px;padding:0 4px;color:#fff;white-space:nowrap;}
+  .hint kbd.ai{background:#6b5bd2;border-color:#8f80ff;font-weight:bold;}
+  .hint .h-key{background:rgba(127,208,255,.07);border:1px solid rgba(127,208,255,.28);border-radius:5px;
+    padding:6px 8px 7px;margin-top:4px;}
+  .hint .h-key .h-head{color:#ffd166;}
+  .hint .h-compare{margin:6px 0 0 14px;padding:5px 8px;border-left:2px solid #ffd166;background:rgba(0,0,0,.2);}
+  .hint .h-compare .old{color:#aab4c2;}
+  .hint .h-compare .new{color:#ffd166;margin-top:2px;}
 
   /* ---------- 편목 (cataloging) ---------- */
   .marc .new852{background:var(--label-green);border-top:1px solid var(--label-green-bd);
@@ -818,15 +834,29 @@
 
 <div class="hint" id="hint">
   <span class="close" onclick="document.getElementById('hint').style.display='none'">닫기 ✕</span>
-  <b>사용법</b>
-  <br>· <b>타대학 소장·청구기호 보기</b> ─ 좌측 [종합목록] · 첫 화면의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.
-  <br>&nbsp;&nbsp;검색해 보려면 [서지검색] → ‘생각이 많아 부처님께 물었더니’ [검색] → [선택자료 가져오기]
-  <br>· <b>본교 서가 보기</b> ─ 상단 [서지] 탭 → 청구기호 <b>294.344</b> [Search]
-  <br>· <b>★ 청구기호 정하기 (핵심)</b> ─ 상단 [편목] 탭 → 대기열 행 더블클릭 → MARC 상세정보
-  → <b>[AI-search]</b> → 후보 순위·근거 확인([상세정보]로 인용 도서까지) → 후보 클릭하면 852에 입력 → 소장처설정 → [저장]
-  <br>&nbsp;&nbsp;기존에는 사서가 업체 082 번호를 본교 서가에서 확인 → 종합목록에서 타대학 분포 확인 → 본교 서가와 다시 대조 → 책소개 확인을 손으로 반복했습니다.
-  AI-search는 이 과정을 한 번에 돌려 후보와 근거를 함께 보여줍니다.
-  <br><span style="color:#888">정적 배포판 · 종합목록에 7권 추가(KERIS 실제 대학별 소장 기록) · 서지 검색은 장서 일부(14만 건) · AI 추천은 공모전 파이프라인 실행 결과를 저장해 보여줌</span>
+  <div class="h-title">사용법</div>
+
+  <div class="h-sec">
+    <div class="h-head">① 타대학 소장·청구기호 보기 <span class="where">좌측 <kbd>종합목록</kbd></span></div>
+    <div class="h-step">첫 화면의 책을 클릭하면 아래에 대학별 분류기호가 나옵니다.</div>
+    <div class="h-step"><span class="lbl">검색해 보려면</span> <kbd>서지검색</kbd> → ‘생각이 많아 부처님께 물었더니’ <kbd>검색</kbd> → <kbd>선택자료 가져오기</kbd></div>
+  </div>
+
+  <div class="h-sec">
+    <div class="h-head">② 본교 서가 보기 <span class="where">상단 <kbd>서지</kbd> 탭</span></div>
+    <div class="h-step">청구기호 <b style="color:#fff">294.344</b> 입력 → <kbd>Search</kbd></div>
+  </div>
+
+  <div class="h-sec h-key">
+    <div class="h-head">★ ③ 청구기호 정하기 <span class="where">상단 <kbd>편목</kbd> 탭</span></div>
+    <div class="h-step">대기열 행 더블클릭 → MARC 상세정보</div>
+    <div class="h-step">→ <kbd class="ai">AI-search</kbd> → 후보 순위·근거 확인 <span class="lbl">(<kbd>상세정보</kbd>로 인용 도서 및 웹사이트 정보까지)</span></div>
+    <div class="h-step">→ 후보 클릭하면 852에 입력 → <kbd>소장처설정</kbd> → <kbd>저장</kbd></div>
+    <div class="h-compare">
+      <div class="old">기존에는 사서가 손으로 반복: 업체 082 번호를 본교 서가에서 확인 → 종합목록에서 타대학 분포 확인 → 본교 서가와 다시 대조 → 외부 웹사이트 책소개 확인</div>
+      <div class="new">AI-search는 이 과정을 한 번에 돌려 후보와 근거를 함께 보여줍니다.</div>
+    </div>
+  </div>
 </div>
 
 
