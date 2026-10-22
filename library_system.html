@@ -321,6 +321,7 @@
   .aix-step .t{font-size:13px;font-weight:600;color:#0f1b2b;margin:2px 0 4px;}
   .aix-step .d{font-size:11.5px;color:#4b5a6b;line-height:1.55;}
   .aix-step .d code{font-family:"IBM Plex Mono",Consolas,monospace;font-size:11px;background:#f1f4f8;padding:0 3px;border-radius:2px;}
+  .aix-ex{color:#8a97a8;font-size:11px;}
   .aix-note{font-size:11.5px;color:#6b7a8c;line-height:1.6;margin-top:8px;}
   .aix-note b{color:#3c4858;font-weight:600;}
   .aix-method{background:#fff;border:1px solid #dde3ea;padding:10px 12px;font-size:12px;color:#3c4858;line-height:1.65;border-radius:2px;}
@@ -1852,14 +1853,18 @@ function saveCandMemo(ta, call){
 const AIX_T2 = 0.80, AIX_GAP = 0.15;   // lib_copilot 판정 기준(LIBCOPILOT_THRESHOLD_2 / GAP_MIN 기본값)
 function aixFacts(d){
   const msgs = d.stage_messages || [];
-  const votes = {}, kw = {};
+  const votes = {}, kw = {}; let excluded = null;
   msgs.forEach(m=>{
-    if(m.startsWith('DDC voting')){ const body = m.split('※')[0]; for(const x of body.matchAll(/(\d{3}(?:\.\d+)?)\((\d+)\)/g)) votes[x[1]] = +x[2]; }
+    if(m.startsWith('DDC voting')){
+      const body = m.split('※')[0]; for(const x of body.matchAll(/(\d{3}(?:\.\d+)?)\((\d+)\)/g)) votes[x[1]] = +x[2];
+      const ex = m.match(/※\s*082\((\d{3}(?:\.\d+)?)\)도\s*(\d+)개 대학/);   // 업체 번호와 같아 득표에서 뺀 표
+      if(ex) excluded = {h: ex[1], n: +ex[2]};
+    }
     if(m.startsWith('키워드 후보')){ for(const x of m.matchAll(/(\d{3}(?:\.\d+)?)\((\d+)권\)/g)) kw[x[1]] = +x[2]; }
   });
   const um = msgs.join(' ').match(/DDC\s*(\d+)개 대학/);
   const shelf = (d.candidates||[]).reduce((n,c)=>n + (c.shelf_sample||[]).length, 0);
-  return { votes, kw, univ: um ? +um[1] : 0, shelf, axesOK: aixAxesOK(d) };
+  return { votes, kw, excluded, univ: um ? +um[1] : 0, shelf, axesOK: aixAxesOK(d) };
 }
 function aixAxes(c){
   const m = String(c.fit_reasoning||'').match(/주제\s*[·ㆍ]\s*관점[^0-9]*([01]\.\d+)[^0-9]+자료\s*성격\s*[·ㆍ]\s*용도[^0-9]*([01]\.\d+)/);
@@ -2131,7 +2136,8 @@ function openAIDetail(){
     const c082 = d.ddc_082 ? (d.candidates||[]).find(c=>c.h===d.ddc_082) : null;
     const s1 = d.ddc_082 ? `<code>${d.ddc_082}</code> ${c082 ? `서가 적합도 <b>${p(c082.shelf_fit)}점</b>` : '본교 소장 없음 · 점수 제외'}` : '업체 번호 없음';
     const top = Object.entries(f.votes).sort((x,y)=>y[1]-x[1]).slice(0,3).map(([h,n])=>`<code>${h}</code> ${n}곳`).join(' · ');
-    const s2 = f.univ ? `${f.univ}개 대학 분류 집계${top ? `<br>${top}` : ''}` : '매칭 없음';
+    const exl = f.excluded ? `<br><code>${f.excluded.h}</code> ${f.excluded.n}곳 <span class="aix-ex">업체 번호와 같아 득표 제외</span>` : '';
+    const s2 = f.univ ? `${f.univ}개 대학 분류 집계${top ? `<br>${top}` : ''}${exl}` : '매칭 없음';
     const s3 = d.went_keyword
       ? `<div class="aix-kw">${(d.keyword_query||[]).map(k=>`<span>${k}</span>`).join('')}</div>`
       : '생략 · 앞 단계에서 확정';
