@@ -351,7 +351,9 @@
     border-top-right-radius:7px;}
   .hint-grip:hover{background-color:rgba(255,255,255,.08);}
   .hint.min .hint-grip{display:none;}
-  .hint .h-title{padding-right:14px;cursor:move;user-select:none;}
+  .hint .h-title{padding-right:14px;}
+  .hint{cursor:move;user-select:none;}
+  .hint summary,.hint .ctrls span{cursor:pointer;}
   .hint .ctrls{float:right;display:flex;gap:10px;}
   .hint .ctrls span{cursor:pointer;color:#aab4c2;font-size:11px;}
   .hint .ctrls span:hover{color:#fff;}
@@ -2315,10 +2317,11 @@ function initHintGrip(){
     const up = ()=>{ g.removeEventListener('pointermove', move); g.removeEventListener('pointerup', up); };
     g.addEventListener('pointermove', move); g.addEventListener('pointerup', up);
   });
-  // 제목 줄을 끌어 이동 (왼쪽·아래 기준 좌표로 옮겨서 크기 조절 손잡이와 함께 동작)
-  const t = h.querySelector('.h-title');
+  // 패널 어디를 잡아도 이동 (왼쪽·아래 기준 좌표로 옮겨서 크기 조절 손잡이와 함께 동작)
+  // 접기·닫기, 크기 조절 손잡이, '기존 방식 보기'는 원래 기능대로 눌린다
+  const t = h;
   t.addEventListener('pointerdown', e=>{
-    if(e.target.closest('.ctrls')) return;
+    if(e.button !== 0 || e.target.closest('.ctrls, .hint-grip, summary')) return;
     e.preventDefault(); t.setPointerCapture(e.pointerId);
     const r = h.getBoundingClientRect(), x0 = e.clientX, y0 = e.clientY;
     const left0 = r.left, bottom0 = window.innerHeight - r.bottom;
